@@ -205,7 +205,7 @@ int aead_decrypt(uint8_t *output, size_t *output_len,
     
     hmac_sha256(expected_tag, mac_key, 32, mac_input, aad_len + pt_len);
     
-    if (!constant_time_compare(expected_tag, ciphertext + pt_len, AEAD_TAG_LEN)) {
+    if (constant_time_compare(expected_tag, ciphertext + pt_len, AEAD_TAG_LEN) != 0) {
         secure_zero(enc_key, 16);
         secure_zero(mac_key, 32);
         return -1;
@@ -241,6 +241,10 @@ void derive_master_key(uint8_t *K_master,
     hkdf_sha256(NULL, 0, ikm, ikm_len,
                info, sizeof(info) - 1,
                K_master, MASTER_KEY_LEN);
+               
+    printf("[Crypto Core] K_master[0-7] = %02x%02x%02x%02x%02x%02x%02x%02x\n",
+             K_master[0], K_master[1], K_master[2], K_master[3],
+             K_master[4], K_master[5], K_master[6], K_master[7]);
     
     secure_zero(ikm, ikm_len);
 }

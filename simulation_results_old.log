@@ -1,0 +1,100 @@
+╔═══════════════════════════════════════════════════════════╗
+║   POST-QUANTUM CRYPTOGRAPHY SIMULATION TEST               ║
+║   Ring-LWE Authentication + QC-LDPC Hybrid Encryption     ║
+╚═══════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1: CRYPTOGRAPHIC KEY GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ PRNG initialized with seed 0xDEADBEEF
+
+🔐 Gateway - Generating Ring-LWE Key Pair...
+   ✅ SUCCESS (1.32 ms)
+   - Secret key: 512 coefficients generated
+   - Public key: 512 coefficients computed
+   - Random R: 512 coefficients sampled
+
+🔐 Gateway - Generating QC-LDPC Key Pair...
+   ✅ SUCCESS (0.01 ms)
+   - Matrix size: 408x816
+   - Row weight: 8, Column weight: 4
+   - Circulant blocks: 4
+
+🔐 Sender - Generating Ring-LWE Key Pair...
+   ✅ SUCCESS (1.23 ms)
+
+🔐 Generating Other Ring Member Keys...
+   ✅ Generated 3 ring members (1.19 ms)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 2: RING SIGNATURE AUTHENTICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 Sender - Generating Ring Signature...
+   Keyword: 'AUTH_REQUEST'
+   Signer index: 0 (hidden among 3 members)
+   ✅ SIGNATURE GENERATED (3.78 ms)
+   - Components: S1, S2, S3 (each 512 coefficients)
+   - Total signature size: 12352 bytes
+
+🔍 Gateway - Verifying Ring Signature...
+   ✅ *** SIGNATURE VALID *** (2.59 ms)
+   - Authentication successful
+   - Sender verified (identity anonymous)
+   - Verified keyword: 'AUTH_REQUEST'
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 4: HYBRID ENCRYPTION (LDPC + AES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📤 Sender - Encrypting Message...
+   Plaintext: 'Hello IoT - Post-Quantum Crypto Works!'
+   Length: 39 bytes
+   ✅ ENCRYPTION SUCCESS (0.03 ms)
+   - Ciphertext size: 39 bytes
+   - Syndrome size: 51 bytes
+   - LDPC error vector generated
+   - Session key derived from error vector
+   - AES-128 CTR encryption applied
+
+📥 Gateway - Decrypting Message...
+   ✅ DECRYPTION SUCCESS (0.01 ms)
+   - LDPC syndrome decoded
+   - Error vector recovered
+   - Session key re-derived
+   - AES-128 decryption applied
+
+   ╔═══════════════════════════════════════════════════╗
+   ║  DECRYPTED MESSAGE: Hello IoT - Post-Quantum Crypto Works!║
+   ╚═══════════════════════════════════════════════════╝
+
+   ✓ Message integrity verified!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SIMULATION SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ All Protocol Phases Completed Successfully!
+
+Phase Breakdown:
+  1. ✓ Key Generation (Ring-LWE + LDPC)
+  2. ✓ Ring Signature Authentication
+  3. ✓ Signature Verification
+  4. ✓ Hybrid Encryption (LDPC + AES)
+  5. ✓ Hybrid Decryption & Verification
+
+Security Properties Demonstrated:
+  ✓ Post-quantum resistance (lattice-based + code-based)
+  ✓ Sender anonymity (ring signature)
+  ✓ Forward secrecy (ephemeral session keys)
+  ✓ Authenticated encryption
+  ✓ Message integrity
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STATUS: ✅ SIMULATION SUCCESSFUL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

@@ -386,14 +386,16 @@ PROCESS_THREAD(sender_process, ev, data)
     LOG_INFO("Authentication payload sent successfully!\n");
     
     /* Wait for authentication response */
-    etimer_set(&periodic_timer, 60 * CLOCK_SECOND);
+    if (!session_ctx.active) {
+        etimer_set(&periodic_timer, 60 * CLOCK_SECOND);
     
-    PROCESS_YIELD_UNTIL((ev == PROCESS_EVENT_POLL && session_ctx.active) ||
-                        etimer_expired(&periodic_timer));
+        PROCESS_YIELD_UNTIL((ev == PROCESS_EVENT_POLL && session_ctx.active) ||
+                            etimer_expired(&periodic_timer));
     
-    if (etimer_expired(&periodic_timer)) {
-        LOG_ERR("Authentication timeout!\n");
-        PROCESS_EXIT();
+        if (etimer_expired(&periodic_timer)) {
+            LOG_ERR("Authentication timeout!\n");
+            PROCESS_EXIT();
+        }
     }
     
     LOG_INFO("\n=== PROTOCOL COMPLETE ===\n");

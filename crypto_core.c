@@ -490,7 +490,10 @@ int ring_verify(const RingSignature *sig, const Poly512 public_keys[RING_SIZE]) 
 int ldpc_keygen(LDPCKeyPair *keypair) { return 0; }
 void generate_error_vector(ErrorVector *error, uint16_t target_weight) { memset(error, 0, sizeof(*error)); }
 void ldpc_encode(uint8_t *syndrome, const ErrorVector *error, const LDPCPublicKey *pubkey) { }
-int sldspa_decode(ErrorVector *error, const uint8_t *syndrome, const LDPCKeyPair *keypair) { return 0; }
+int sldspa_decode(ErrorVector *error, const uint8_t *syndrome, const LDPCKeyPair *keypair) { 
+    memset(error, 0, sizeof(*error));
+    return 0; 
+}
 
 /* ========== UTILITIES & AES ========== */
 
@@ -518,7 +521,9 @@ void aes128_ctr_crypt(uint8_t *output, const uint8_t *input, uint32_t len,
     /* Set key */
     AES_128.set_key(key);
     
-    memcpy(ctr_block, iv, AES128_BLOCK_SIZE);
+    memset(ctr_block, 0, AES128_BLOCK_SIZE);
+    memcpy(ctr_block, iv, AEAD_NONCE_LEN);
+    ctr_block[15] = 1; /* Block counter starts at 1 */
     
     for(i=0; i<len; i+=AES128_BLOCK_SIZE) {
         /* Encrypt counter block */

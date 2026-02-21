@@ -789,55 +789,115 @@
 00:19.351	ID:2	[INFO: Gateway   ] DEBUG: Received Commitment (first 4 bytes): f145af4c
 00:19.351	ID:2	[INFO: Gateway   ] Ring signature verified: SUCCESS
 00:19.351	ID:2	[INFO: Gateway   ] Decoding LDPC syndrome...
-00:19.351	ID:2	[INFO: Gateway   ] LDPC decoding successful (weight=29606)
+00:19.351	ID:2	[INFO: Gateway   ] LDPC decoding successful (weight=32380)
 00:19.351	ID:2	[INFO: Gateway   ] Generating session parameters...
 00:19.351	ID:2	[INFO: Gateway   ] Deriving master session key...
+00:19.351	ID:2	[Crypto Core] K_master[0-7] = 33ede09164d753af
 00:19.351	ID:2	[INFO: Gateway   ] Creating session entry...
 00:19.351	ID:2	[INFO: Gateway   ] Session created
 00:19.351	ID:2	[INFO: IPv6      ] Sending packet with length 89 (49)
-00:19.351	ID:2	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::202:2:2:2
-00:19.351	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.351	ID:2	[INFO: Gateway   ] ACK sent! Session established.
+00:19.352	ID:2	[INFO: Gateway   ] ACK sent! Session established.
 00:19.395	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
 00:19.395	ID:1	[INFO: IPv6      ] Receiving UDP packet
 00:19.395	ID:1	[INFO: Sender    ] Received message type 0x05
 00:19.395	ID:1	[INFO: Sender    ] Received ACK for fragment 41
 00:19.395	ID:1	[INFO: Sender    ] ACK received for fragment 41
 00:19.395	ID:1	[INFO: Sender    ] Authentication payload sent successfully!
-00:26.251	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:26.277	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-00:26.277	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+00:19.405	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+00:19.405	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.405	ID:1	[INFO: Sender    ] Received message type 0x02
+00:19.405	ID:1	[INFO: Sender    ] Authentication ACK received!
+00:19.405	ID:1	[INFO: Sender    ] SID: [f81012de...]
+00:19.405	ID:1	[INFO: Sender    ] Deriving master session key...
+00:19.405	ID:1	[Crypto Core] K_master[0-7] = b2e37c3861d81149
+00:19.405	ID:1	[INFO: Sender    ] Session initialized! Sending 10 encrypted messages...
+00:19.405	ID:1	[INFO: Sender    ] Message 1 encrypted (29 bytes)
+00:19.405	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.405	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+00:19.405	ID:1	[INFO: IPv6 Route] No route found
+00:19.405	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+00:19.405	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=1
+00:19.406	ID:1	[INFO: Sender    ] Message 2 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=2
+00:19.406	ID:1	[INFO: Sender    ] Message 3 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=3
+00:19.406	ID:1	[INFO: Sender    ] Message 4 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=4
+00:19.406	ID:1	[INFO: Sender    ] Message 5 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=5
+00:19.406	ID:1	[INFO: Sender    ] Message 6 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=6
+00:19.406	ID:1	[INFO: Sender    ] Message 7 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=7
+00:19.406	ID:1	[INFO: Sender    ] Message 8 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=8
+00:19.406	ID:1	[INFO: Sender    ] Message 9 encrypted (29 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=9
+00:19.406	ID:1	[INFO: Sender    ] Message 10 encrypted (30 bytes)
+00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
+00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
+00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=10
+00:19.406	ID:1	[INFO: Sender    ] Data transmission complete! Sent 10 messages.
+00:19.406	ID:1	[INFO: Sender    ] 
+00:19.406	ID:1	=== PROTOCOL COMPLETE ===
+00:19.406	ID:1	[INFO: Sender    ] Successfully authenticated and encrypted messages sent!
+00:19.432	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+00:19.432	ID:2	[INFO: IPv6      ] Receiving UDP packet
+00:19.432	ID:2	[INFO: Gateway   ] Received message type 0x03
+00:19.432	ID:2	[INFO: Gateway   ] 
+00:19.432	ID:2	[Data Phase] Received encrypted message
+00:19.432	ID:2	[INFO: Gateway   ] SID: [f81012de...]
+00:19.432	ID:2	[INFO: Gateway   ] Counter: 1
+00:19.432	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+00:19.432	ID:2	[ERR : Gateway   ] AEAD decryption failed!
+00:23.647	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+00:23.661	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
+00:23.661	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
 00:28.619	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:28.629	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:28.629	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:38.934	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:38.943	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-00:38.943	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:48.279	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:48.312	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:48.312	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+00:28.633	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
+00:28.633	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+00:36.319	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+00:36.332	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
+00:36.332	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+00:57.870	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+00:57.880	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
+00:57.880	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
 01:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-01:11.901	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-01:11.907	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-01:11.907	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-01:19.395	ID:1	[ERR : Sender    ] Authentication timeout!
-01:48.758	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-01:48.764	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-01:48.764	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+01:07.017	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+01:07.048	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
+01:07.048	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+01:56.567	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+01:56.597	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
+01:56.597	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+01:58.493	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+01:58.528	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
+01:58.528	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
 02:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-02:02.714	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-02:02.757	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-02:02.757	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
 03:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-03:28.379	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-03:28.395	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-03:28.395	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-03:58.318	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-03:58.350	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-03:58.350	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-04:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-05:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-06:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-06:37.616	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-06:37.645	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-06:37.645	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+03:28.291	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72

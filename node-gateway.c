@@ -122,6 +122,10 @@ udp_rx_callback(struct simple_udp_connection *c,
 {
     uint8_t msg_type = data[0];
     
+    /* Copy sender address because simple_udp_sendto overwrites the shared uip_buf */
+    uip_ipaddr_t sender_ip_copy;
+    uip_ipaddr_copy(&sender_ip_copy, sender_addr);
+    
     LOG_INFO("Received message type 0x%02x\n", msg_type);
     
     if (msg_type == MSG_TYPE_AUTH_FRAG) {
@@ -144,7 +148,7 @@ udp_rx_callback(struct simple_udp_connection *c,
         FragmentAck ack;
         ack.type = MSG_TYPE_FRAG_ACK;
         ack.fragment_id = frag->fragment_id;
-        simple_udp_sendto(&udp_conn, &ack, sizeof(FragmentAck), sender_addr);
+        simple_udp_sendto(&udp_conn, &ack, sizeof(FragmentAck), &sender_ip_copy);
         
         /* Check if last fragment */
         if (fragment_id == total_frags - 1) {
@@ -251,7 +255,7 @@ udp_rx_callback(struct simple_udp_connection *c,
             memcpy(ack_msg.N_G, N_G, 32);
             memcpy(ack_msg.SID, SID, SID_LEN);
             
-            simple_udp_sendto(&udp_conn, &ack_msg, sizeof(AuthAckMessage), sender_addr);
+            simple_udp_sendto(&udp_conn, &ack_msg, sizeof(AuthAckMessage), &sender_ip_copy);
             LOG_INFO("ACK sent! Session established.\n");
         }
         return;
