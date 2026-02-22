@@ -1,903 +1,1158 @@
-00:00.236	ID:2	[INFO: Main      ] Starting Contiki-NG-release/v5.1-71-g23e51c4d4-dirty
-00:00.236	ID:2	[DBG : Main      ] TARGET=cooja
-00:00.236	ID:2	[INFO: Main      ] - Routing: RPL Lite
-00:00.236	ID:2	[INFO: Main      ] - Net: sicslowpan
-00:00.236	ID:2	[INFO: Main      ] - MAC: CSMA
-00:00.236	ID:2	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
-00:00.236	ID:2	[INFO: Main      ] - 802.15.4 Default channel: 26
-00:00.236	ID:2	[INFO: Main      ] Node ID: 2
-00:00.236	ID:2	[INFO: Main      ] Link-layer address: 0002.0002.0002.0002
-00:00.236	ID:2	[INFO: IPv6 DS   ] Init: 4 neighbors
-00:00.236	ID:2	[INFO: IPv6 DS   ] 2 default routers
-00:00.236	ID:2	[INFO: IPv6 DS   ] 3 prefixes
-00:00.236	ID:2	[INFO: IPv6 DS   ] 4 routes
-00:00.236	ID:2	[INFO: IPv6 DS   ] 3 unicast addresses
-00:00.236	ID:2	[INFO: IPv6 DS   ] 7 multicast addresses
-00:00.236	ID:2	[INFO: IPv6 DS   ] 2 anycast addresses
-00:00.236	ID:2	[INFO: IPv6 DS   ] Adding prefix fe80:: len 64, flags 0, valid/preferred lifetime 0/0
-00:00.236	ID:2	[INFO: Main      ] Tentative link-local IPv6 address: fe80::202:2:2:2
-00:00.236	ID:2	[INFO: Gateway   ] === Ring-LWE Gateway Node Starting ===
-00:00.236	ID:2	[INFO: Gateway   ] [Initialization] Generating cryptographic keys...
-00:00.236	ID:2	[INFO: Gateway   ] 1. Generating Ring-LWE keys...
-00:00.236	ID:2	[INFO: Gateway   ]    Ring-LWE key generation: SUCCESS
-00:00.236	ID:2	[INFO: Gateway   ] 2. Generating QC-LDPC keys...
-00:00.236	ID:2	[INFO: Gateway   ]    LDPC matrix generation: SUCCESS
-00:00.236	ID:2	[INFO: Gateway   ] 3. Initializing ring member public keys...
-00:00.236	ID:2	[INFO: Gateway   ]    - Ring member 2 public key generated
-00:00.236	ID:2	[INFO: Gateway   ]    - Ring member 3 public key generated
-00:00.236	ID:2	[INFO: Gateway   ]    Ring setup complete
-00:00.236	ID:2	[INFO: Gateway   ] 
-00:00.236	ID:2	=== Gateway Ready ===
-00:00.236	ID:2	[INFO: Gateway   ] Configuration:
-00:00.236	ID:2	[INFO: Gateway   ]   - Polynomial degree (n): 128
-00:00.236	ID:2	[INFO: Gateway   ]   - Modulus (q): 536870909
-00:00.236	ID:2	[INFO: Gateway   ]   - Ring size (N): 3
-00:00.236	ID:2	[INFO: Gateway   ]   - LDPC dimensions: 102x204
-00:00.236	ID:2	[INFO: Gateway   ] 
-00:00.236	ID:2	Listening on UDP port 5678...
-00:00.236	ID:2	
-00:00.382	ID:1	[INFO: Main      ] Starting Contiki-NG-release/v5.1-71-g23e51c4d4-dirty
-00:00.382	ID:1	[DBG : Main      ] TARGET=cooja
-00:00.382	ID:1	[INFO: Main      ] - Routing: RPL Lite
-00:00.382	ID:1	[INFO: Main      ] - Net: sicslowpan
-00:00.382	ID:1	[INFO: Main      ] - MAC: CSMA
-00:00.382	ID:1	[INFO: Main      ] - 802.15.4 PANID: 0xabcd
-00:00.382	ID:1	[INFO: Main      ] - 802.15.4 Default channel: 26
-00:00.382	ID:1	[INFO: Main      ] Node ID: 1
-00:00.382	ID:1	[INFO: Main      ] Link-layer address: 0001.0001.0001.0001
-00:00.382	ID:1	[INFO: IPv6 DS   ] Init: 4 neighbors
-00:00.382	ID:1	[INFO: IPv6 DS   ] 2 default routers
-00:00.382	ID:1	[INFO: IPv6 DS   ] 3 prefixes
-00:00.382	ID:1	[INFO: IPv6 DS   ] 4 routes
-00:00.382	ID:1	[INFO: IPv6 DS   ] 3 unicast addresses
-00:00.382	ID:1	[INFO: IPv6 DS   ] 7 multicast addresses
-00:00.382	ID:1	[INFO: IPv6 DS   ] 2 anycast addresses
-00:00.382	ID:1	[INFO: IPv6 DS   ] Adding prefix fe80:: len 64, flags 0, valid/preferred lifetime 0/0
-00:00.382	ID:1	[INFO: Main      ] Tentative link-local IPv6 address: fe80::201:1:1:1
-00:00.382	ID:1	[INFO: Sender    ] === Ring-LWE Sender Node Starting ===
-00:00.382	ID:1	[INFO: Sender    ] [Phase 1] Generating Ring-LWE keys...
-00:00.382	ID:1	[INFO: Sender    ] Ring-LWE key generation successful
-00:00.382	ID:1	Sender PubKey: [251108041 370523974 226480932 84825653 146225721 366191725 224492815 41107166 ...]
-00:00.382	ID:1	[INFO: Sender    ] Generating ring public keys...
-00:00.382	ID:1	[INFO: Sender    ]   - Ring member 1 (Sender): Real key
-00:00.382	ID:1	[INFO: Sender    ]   - Ring member 2: Fake key
-00:00.382	ID:1	[INFO: Sender    ]   - Ring member 3: Fake key
-00:00.382	ID:1	[INFO: Sender    ] Waiting for network initialization...
-00:02.708	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:02.742	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:02.742	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:02.742	ID:1	[INFO: IPv6 Nbr  ] Adding neighbor with ip addr fe80::202:2:2:2 link addr 0002.0002.0002.0002 state 1
-00:04.709	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to fe80::202:2:2:2, type 155, code 1, len 72
-00:04.747	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to fe80::202:2:2:2
-00:04.747	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:04.747	ID:2	[INFO: IPv6 Nbr  ] Adding neighbor with ip addr fe80::201:1:1:1 link addr 0001.0001.0001.0001 state 1
-00:05.382	ID:1	[INFO: Sender    ] Gateway address obtained
-00:05.382	ID:1	[INFO: Sender    ] Allowing network routing to stabilize (10s)...
-00:06.162	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to fe80::202:2:2:2, type 155, code 1, len 72
-00:06.174	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to fe80::202:2:2:2
-00:06.174	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:08.116	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to fe80::202:2:2:2, type 155, code 1, len 72
-00:08.144	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to fe80::202:2:2:2
-00:08.144	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:09.526	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to fe80::202:2:2:2, type 155, code 1, len 72
-00:09.554	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to fe80::202:2:2:2
-00:09.554	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:09.554	ID:1	[INFO: IPv6 Route] Add default: adding default route to fe80::202:2:2:2
-00:11.783	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:11.827	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:11.827	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:15.382	ID:1	[INFO: Sender    ] 
-00:15.382	ID:1	[Phase 2] Starting Ring Signature Authentication...
-00:15.382	ID:1	[INFO: Sender    ] Initializing LDPC public key...
-00:15.382	ID:1	[INFO: Sender    ] Generating LDPC error vector...
-00:15.382	ID:1	[INFO: Sender    ] Error vector generated (weight=0)
-00:15.382	ID:1	[INFO: Sender    ] Encoding syndrome...
-00:15.382	ID:1	[INFO: Sender    ] Generating ring signature (N=3 members)...
-00:15.382	ID:1	[INFO: Sender    ] Ring signature generated successfully
-00:15.382	ID:1	[INFO: Sender    ] DEBUG: Sender Public Key sent:
-00:15.382	ID:1	PubKey: [251108041 370523974 226480932 84825653 146225721 366191725 224492815 41107166 ...]
-00:15.382	ID:1	[INFO: Sender    ] DEBUG: Signature w sent (first 8 coeffs):
-00:15.382	ID:1	Sig.w: [17115 18256 36150 11049 42623 20507 11747 54132 ...]
-00:15.382	ID:1	[INFO: Sender    ] DEBUG: Signature Commitment (first 4 bytes): f145af4c
-00:15.382	ID:1	[INFO: Sender    ] Sending authentication message via fragmentation...
-00:15.382	ID:1	[INFO: Sender    ] Total payload: 2637 bytes (42 fragments)
-00:15.382	ID:1	[INFO: Sender    ] Sending Fragment 1/42 (64 bytes)...
-00:15.382	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:15.382	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:15.382	ID:1	[INFO: IPv6 Route] No route found
-00:15.382	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:15.382	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:15.400	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:15.400	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:15.400	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:15.400	ID:2	[INFO: Gateway   ] Received Fragment 1/42 (64 bytes)
-00:15.400	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:15.400	ID:2	[INFO: IPv6 Route] Looking up route for fd00::201:1:1:1
-00:15.400	ID:2	[INFO: IPv6 Route] No route found
-00:15.405	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to fd00::202:2:2:2, type 155, code 2, len 46
-00:15.405	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:15.405	ID:1	[INFO: IPv6 Route] No route found
-00:15.405	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:15.405	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:15.435	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:15.435	ID:2	[INFO: IPv6      ] icmpv6 input length 98 type: 155 
-00:15.435	ID:2	[INFO: IPv6 SR   ] NS: updating link, child fd00::202:2:2:2, parent (NULL IP addr), lifetime 4294967295, num_nodes 1
-00:15.435	ID:2	[INFO: IPv6 SR   ] NS: updating link, child fd00::201:1:1:1, parent fd00::202:2:2:2, lifetime 1800, num_nodes 2
-00:15.435	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to fd00::201:1:1:1, type 155, code 3, len 4
-00:15.448	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:15.448	ID:1	[INFO: IPv6      ] icmpv6 input length 56 type: 155 
-00:17.383	ID:1	[INFO: Sender    ] Timeout for fragment 0, retrying...
-00:17.383	ID:1	[INFO: Sender    ] Sending Fragment 2/42 (64 bytes)...
-00:17.383	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.383	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.383	ID:1	[INFO: IPv6 Route] No route found
-00:17.383	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.383	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.398	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.398	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.398	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.398	ID:2	[INFO: Gateway   ] Received Fragment 2/42 (64 bytes)
-00:17.398	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.431	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.431	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.431	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.431	ID:1	[INFO: Sender    ] Received ACK for fragment 1
-00:17.431	ID:1	[INFO: Sender    ] ACK received for fragment 1
-00:17.431	ID:1	[INFO: Sender    ] Sending Fragment 3/42 (64 bytes)...
-00:17.431	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.431	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.431	ID:1	[INFO: IPv6 Route] No route found
-00:17.431	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.431	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.439	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.439	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.439	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.439	ID:2	[INFO: Gateway   ] Received Fragment 3/42 (64 bytes)
-00:17.439	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.460	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.460	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.460	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.460	ID:1	[INFO: Sender    ] Received ACK for fragment 2
-00:17.460	ID:1	[INFO: Sender    ] ACK received for fragment 2
-00:17.460	ID:1	[INFO: Sender    ] Sending Fragment 4/42 (64 bytes)...
-00:17.460	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.460	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.460	ID:1	[INFO: IPv6 Route] No route found
-00:17.460	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.460	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.479	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.479	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.479	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.479	ID:2	[INFO: Gateway   ] Received Fragment 4/42 (64 bytes)
-00:17.479	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.514	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.514	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.514	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.514	ID:1	[INFO: Sender    ] Received ACK for fragment 3
-00:17.514	ID:1	[INFO: Sender    ] ACK received for fragment 3
-00:17.514	ID:1	[INFO: Sender    ] Sending Fragment 5/42 (64 bytes)...
-00:17.514	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.514	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.514	ID:1	[INFO: IPv6 Route] No route found
-00:17.514	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.514	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.523	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.523	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.523	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.523	ID:2	[INFO: Gateway   ] Received Fragment 5/42 (64 bytes)
-00:17.523	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.545	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.545	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.545	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.545	ID:1	[INFO: Sender    ] Received ACK for fragment 4
-00:17.545	ID:1	[INFO: Sender    ] ACK received for fragment 4
-00:17.545	ID:1	[INFO: Sender    ] Sending Fragment 6/42 (64 bytes)...
-00:17.545	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.545	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.545	ID:1	[INFO: IPv6 Route] No route found
-00:17.545	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.545	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.556	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.556	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.556	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.556	ID:2	[INFO: Gateway   ] Received Fragment 6/42 (64 bytes)
-00:17.556	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.589	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.589	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.589	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.589	ID:1	[INFO: Sender    ] Received ACK for fragment 5
-00:17.589	ID:1	[INFO: Sender    ] ACK received for fragment 5
-00:17.589	ID:1	[INFO: Sender    ] Sending Fragment 7/42 (64 bytes)...
-00:17.589	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.589	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.589	ID:1	[INFO: IPv6 Route] No route found
-00:17.589	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.589	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.608	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.608	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.608	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.608	ID:2	[INFO: Gateway   ] Received Fragment 7/42 (64 bytes)
-00:17.608	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.644	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.644	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.644	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.644	ID:1	[INFO: Sender    ] Received ACK for fragment 6
-00:17.644	ID:1	[INFO: Sender    ] ACK received for fragment 6
-00:17.644	ID:1	[INFO: Sender    ] Sending Fragment 8/42 (64 bytes)...
-00:17.644	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.644	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.644	ID:1	[INFO: IPv6 Route] No route found
-00:17.644	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.644	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.691	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.691	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.691	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.691	ID:2	[INFO: Gateway   ] Received Fragment 8/42 (64 bytes)
-00:17.691	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.700	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.700	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.700	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.700	ID:1	[INFO: Sender    ] Received ACK for fragment 7
-00:17.700	ID:1	[INFO: Sender    ] ACK received for fragment 7
-00:17.700	ID:1	[INFO: Sender    ] Sending Fragment 9/42 (64 bytes)...
-00:17.700	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.700	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.700	ID:1	[INFO: IPv6 Route] No route found
-00:17.700	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.700	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.709	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.709	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.709	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.709	ID:2	[INFO: Gateway   ] Received Fragment 9/42 (64 bytes)
-00:17.709	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.714	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.714	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.714	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.714	ID:1	[INFO: Sender    ] Received ACK for fragment 8
-00:17.714	ID:1	[INFO: Sender    ] ACK received for fragment 8
-00:17.714	ID:1	[INFO: Sender    ] Sending Fragment 10/42 (64 bytes)...
-00:17.714	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.714	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.714	ID:1	[INFO: IPv6 Route] No route found
-00:17.714	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.714	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.743	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.743	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.743	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.743	ID:2	[INFO: Gateway   ] Received Fragment 10/42 (64 bytes)
-00:17.743	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.775	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.775	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.775	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.775	ID:1	[INFO: Sender    ] Received ACK for fragment 9
-00:17.775	ID:1	[INFO: Sender    ] ACK received for fragment 9
-00:17.775	ID:1	[INFO: Sender    ] Sending Fragment 11/42 (64 bytes)...
-00:17.775	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.775	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.775	ID:1	[INFO: IPv6 Route] No route found
-00:17.775	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.775	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.804	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.804	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.804	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.804	ID:2	[INFO: Gateway   ] Received Fragment 11/42 (64 bytes)
-00:17.804	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.849	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.849	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.849	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.849	ID:1	[INFO: Sender    ] Received ACK for fragment 10
-00:17.849	ID:1	[INFO: Sender    ] ACK received for fragment 10
-00:17.849	ID:1	[INFO: Sender    ] Sending Fragment 12/42 (64 bytes)...
-00:17.849	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.849	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.849	ID:1	[INFO: IPv6 Route] No route found
-00:17.849	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.849	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.887	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.887	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.887	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.887	ID:2	[INFO: Gateway   ] Received Fragment 12/42 (64 bytes)
-00:17.887	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.914	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.914	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.914	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.914	ID:1	[INFO: Sender    ] Received ACK for fragment 11
-00:17.914	ID:1	[INFO: Sender    ] ACK received for fragment 11
-00:17.914	ID:1	[INFO: Sender    ] Sending Fragment 13/42 (64 bytes)...
-00:17.914	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.914	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.914	ID:1	[INFO: IPv6 Route] No route found
-00:17.914	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.914	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:17.952	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:17.952	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:17.952	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:17.952	ID:2	[INFO: Gateway   ] Received Fragment 13/42 (64 bytes)
-00:17.952	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:17.971	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:17.971	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:17.971	ID:1	[INFO: Sender    ] Received message type 0x05
-00:17.971	ID:1	[INFO: Sender    ] Received ACK for fragment 12
-00:17.971	ID:1	[INFO: Sender    ] ACK received for fragment 12
-00:17.971	ID:1	[INFO: Sender    ] Sending Fragment 14/42 (64 bytes)...
-00:17.971	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:17.971	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:17.971	ID:1	[INFO: IPv6 Route] No route found
-00:17.971	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:17.971	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.002	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.002	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.002	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.002	ID:2	[INFO: Gateway   ] Received Fragment 14/42 (64 bytes)
-00:18.002	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.039	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.039	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.039	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.039	ID:1	[INFO: Sender    ] Received ACK for fragment 13
-00:18.039	ID:1	[INFO: Sender    ] ACK received for fragment 13
-00:18.039	ID:1	[INFO: Sender    ] Sending Fragment 15/42 (64 bytes)...
-00:18.039	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.039	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.039	ID:1	[INFO: IPv6 Route] No route found
-00:18.039	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.039	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.048	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.048	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.048	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.048	ID:2	[INFO: Gateway   ] Received Fragment 15/42 (64 bytes)
-00:18.048	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.071	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.071	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.071	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.071	ID:1	[INFO: Sender    ] Received ACK for fragment 14
-00:18.071	ID:1	[INFO: Sender    ] ACK received for fragment 14
-00:18.071	ID:1	[INFO: Sender    ] Sending Fragment 16/42 (64 bytes)...
-00:18.071	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.071	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.071	ID:1	[INFO: IPv6 Route] No route found
-00:18.071	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.071	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.079	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.079	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.079	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.079	ID:2	[INFO: Gateway   ] Received Fragment 16/42 (64 bytes)
-00:18.079	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.113	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.113	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.113	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.113	ID:1	[INFO: Sender    ] Received ACK for fragment 15
-00:18.113	ID:1	[INFO: Sender    ] ACK received for fragment 15
-00:18.113	ID:1	[INFO: Sender    ] Sending Fragment 17/42 (64 bytes)...
-00:18.113	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.113	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.113	ID:1	[INFO: IPv6 Route] No route found
-00:18.113	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.113	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.155	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.155	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.155	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.155	ID:2	[INFO: Gateway   ] Received Fragment 17/42 (64 bytes)
-00:18.155	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.173	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.173	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.173	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.173	ID:1	[INFO: Sender    ] Received ACK for fragment 16
-00:18.173	ID:1	[INFO: Sender    ] ACK received for fragment 16
-00:18.173	ID:1	[INFO: Sender    ] Sending Fragment 18/42 (64 bytes)...
-00:18.173	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.173	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.173	ID:1	[INFO: IPv6 Route] No route found
-00:18.173	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.173	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.185	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.185	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.185	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.185	ID:2	[INFO: Gateway   ] Received Fragment 18/42 (64 bytes)
-00:18.185	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.228	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.228	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.228	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.228	ID:1	[INFO: Sender    ] Received ACK for fragment 17
-00:18.228	ID:1	[INFO: Sender    ] ACK received for fragment 17
-00:18.228	ID:1	[INFO: Sender    ] Sending Fragment 19/42 (64 bytes)...
-00:18.228	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.228	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.228	ID:1	[INFO: IPv6 Route] No route found
-00:18.228	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.228	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.265	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.265	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.265	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.265	ID:2	[INFO: Gateway   ] Received Fragment 19/42 (64 bytes)
-00:18.265	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.294	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.294	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.294	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.294	ID:1	[INFO: Sender    ] Received ACK for fragment 18
-00:18.294	ID:1	[INFO: Sender    ] ACK received for fragment 18
-00:18.294	ID:1	[INFO: Sender    ] Sending Fragment 20/42 (64 bytes)...
-00:18.294	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.294	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.294	ID:1	[INFO: IPv6 Route] No route found
-00:18.294	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.294	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.323	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.323	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.323	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.323	ID:2	[INFO: Gateway   ] Received Fragment 20/42 (64 bytes)
-00:18.323	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.351	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.351	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.351	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.351	ID:1	[INFO: Sender    ] Received ACK for fragment 19
-00:18.351	ID:1	[INFO: Sender    ] ACK received for fragment 19
-00:18.351	ID:1	[INFO: Sender    ] Sending Fragment 21/42 (64 bytes)...
-00:18.351	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.351	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.351	ID:1	[INFO: IPv6 Route] No route found
-00:18.351	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.351	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.359	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.359	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.359	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.359	ID:2	[INFO: Gateway   ] Received Fragment 21/42 (64 bytes)
-00:18.359	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.379	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.379	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.379	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.379	ID:1	[INFO: Sender    ] Received ACK for fragment 20
-00:18.379	ID:1	[INFO: Sender    ] ACK received for fragment 20
-00:18.379	ID:1	[INFO: Sender    ] Sending Fragment 22/42 (64 bytes)...
-00:18.379	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.379	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.379	ID:1	[INFO: IPv6 Route] No route found
-00:18.379	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.379	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.403	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.403	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.403	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.403	ID:2	[INFO: Gateway   ] Received Fragment 22/42 (64 bytes)
-00:18.403	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.434	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.434	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.434	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.434	ID:1	[INFO: Sender    ] Received ACK for fragment 21
-00:18.434	ID:1	[INFO: Sender    ] ACK received for fragment 21
-00:18.434	ID:1	[INFO: Sender    ] Sending Fragment 23/42 (64 bytes)...
-00:18.434	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.434	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.434	ID:1	[INFO: IPv6 Route] No route found
-00:18.434	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.434	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.475	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.475	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.475	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.475	ID:2	[INFO: Gateway   ] Received Fragment 23/42 (64 bytes)
-00:18.475	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.516	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.516	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.516	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.516	ID:1	[INFO: Sender    ] Received ACK for fragment 22
-00:18.516	ID:1	[INFO: Sender    ] ACK received for fragment 22
-00:18.516	ID:1	[INFO: Sender    ] Sending Fragment 24/42 (64 bytes)...
-00:18.516	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.516	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.516	ID:1	[INFO: IPv6 Route] No route found
-00:18.516	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.516	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.533	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.533	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.533	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.533	ID:2	[INFO: Gateway   ] Received Fragment 24/42 (64 bytes)
-00:18.533	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.572	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.572	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.572	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.572	ID:1	[INFO: Sender    ] Received ACK for fragment 23
-00:18.572	ID:1	[INFO: Sender    ] ACK received for fragment 23
-00:18.572	ID:1	[INFO: Sender    ] Sending Fragment 25/42 (64 bytes)...
-00:18.572	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.572	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.572	ID:1	[INFO: IPv6 Route] No route found
-00:18.572	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.572	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.614	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.614	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.614	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.614	ID:2	[INFO: Gateway   ] Received Fragment 25/42 (64 bytes)
-00:18.614	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.621	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.621	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.621	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.621	ID:1	[INFO: Sender    ] Received ACK for fragment 24
-00:18.621	ID:1	[INFO: Sender    ] ACK received for fragment 24
-00:18.621	ID:1	[INFO: Sender    ] Sending Fragment 26/42 (64 bytes)...
-00:18.621	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.621	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.621	ID:1	[INFO: IPv6 Route] No route found
-00:18.621	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.621	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.634	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.634	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.634	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.634	ID:2	[INFO: Gateway   ] Received Fragment 26/42 (64 bytes)
-00:18.634	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.669	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.669	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.669	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.669	ID:1	[INFO: Sender    ] Received ACK for fragment 25
-00:18.669	ID:1	[INFO: Sender    ] ACK received for fragment 25
-00:18.669	ID:1	[INFO: Sender    ] Sending Fragment 27/42 (64 bytes)...
-00:18.669	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.669	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.669	ID:1	[INFO: IPv6 Route] No route found
-00:18.669	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.669	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.681	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.681	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.681	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.681	ID:2	[INFO: Gateway   ] Received Fragment 27/42 (64 bytes)
-00:18.681	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.708	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.708	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.708	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.708	ID:1	[INFO: Sender    ] Received ACK for fragment 26
-00:18.708	ID:1	[INFO: Sender    ] ACK received for fragment 26
-00:18.708	ID:1	[INFO: Sender    ] Sending Fragment 28/42 (64 bytes)...
-00:18.708	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.708	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.708	ID:1	[INFO: IPv6 Route] No route found
-00:18.708	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.708	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.750	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.750	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.750	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.750	ID:2	[INFO: Gateway   ] Received Fragment 28/42 (64 bytes)
-00:18.750	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.771	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.771	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.771	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.771	ID:1	[INFO: Sender    ] Received ACK for fragment 27
-00:18.771	ID:1	[INFO: Sender    ] ACK received for fragment 27
-00:18.771	ID:1	[INFO: Sender    ] Sending Fragment 29/42 (64 bytes)...
-00:18.771	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.771	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.771	ID:1	[INFO: IPv6 Route] No route found
-00:18.771	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.771	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.785	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.785	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.785	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.785	ID:2	[INFO: Gateway   ] Received Fragment 29/42 (64 bytes)
-00:18.785	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.797	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.797	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.797	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.797	ID:1	[INFO: Sender    ] Received ACK for fragment 28
-00:18.797	ID:1	[INFO: Sender    ] ACK received for fragment 28
-00:18.797	ID:1	[INFO: Sender    ] Sending Fragment 30/42 (64 bytes)...
-00:18.797	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.797	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.797	ID:1	[INFO: IPv6 Route] No route found
-00:18.797	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.797	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.832	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.832	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.832	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.832	ID:2	[INFO: Gateway   ] Received Fragment 30/42 (64 bytes)
-00:18.832	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.839	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.839	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.839	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.839	ID:1	[INFO: Sender    ] Received ACK for fragment 29
-00:18.839	ID:1	[INFO: Sender    ] ACK received for fragment 29
-00:18.839	ID:1	[INFO: Sender    ] Sending Fragment 31/42 (64 bytes)...
-00:18.839	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.839	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.839	ID:1	[INFO: IPv6 Route] No route found
-00:18.839	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.839	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.847	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.847	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.847	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.847	ID:2	[INFO: Gateway   ] Received Fragment 31/42 (64 bytes)
-00:18.847	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.877	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.877	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.877	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.877	ID:1	[INFO: Sender    ] Received ACK for fragment 30
-00:18.877	ID:1	[INFO: Sender    ] ACK received for fragment 30
-00:18.877	ID:1	[INFO: Sender    ] Sending Fragment 32/42 (64 bytes)...
-00:18.877	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.877	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.877	ID:1	[INFO: IPv6 Route] No route found
-00:18.877	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.877	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.884	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:18.902	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.902	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.902	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.902	ID:2	[INFO: Gateway   ] Received Fragment 32/42 (64 bytes)
-00:18.902	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.914	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.914	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.914	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.914	ID:1	[INFO: Sender    ] Received ACK for fragment 31
-00:18.914	ID:1	[INFO: Sender    ] ACK received for fragment 31
-00:18.914	ID:1	[INFO: Sender    ] Sending Fragment 33/42 (64 bytes)...
-00:18.914	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.914	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.914	ID:1	[INFO: IPv6 Route] No route found
-00:18.914	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.914	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.925	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-00:18.925	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:18.942	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.942	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.942	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.942	ID:2	[INFO: Gateway   ] Received Fragment 33/42 (64 bytes)
-00:18.942	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.954	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.954	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.954	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.954	ID:1	[INFO: Sender    ] Received ACK for fragment 32
-00:18.954	ID:1	[INFO: Sender    ] ACK received for fragment 32
-00:18.954	ID:1	[INFO: Sender    ] Sending Fragment 34/42 (64 bytes)...
-00:18.954	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.954	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.954	ID:1	[INFO: IPv6 Route] No route found
-00:18.954	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.954	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:18.978	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:18.978	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:18.978	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:18.978	ID:2	[INFO: Gateway   ] Received Fragment 34/42 (64 bytes)
-00:18.978	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:18.992	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:18.992	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:18.992	ID:1	[INFO: Sender    ] Received message type 0x05
-00:18.992	ID:1	[INFO: Sender    ] Received ACK for fragment 33
-00:18.992	ID:1	[INFO: Sender    ] ACK received for fragment 33
-00:18.992	ID:1	[INFO: Sender    ] Sending Fragment 35/42 (64 bytes)...
-00:18.992	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:18.992	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:18.992	ID:1	[INFO: IPv6 Route] No route found
-00:18.992	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:18.992	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.023	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.023	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.023	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.023	ID:2	[INFO: Gateway   ] Received Fragment 35/42 (64 bytes)
-00:19.023	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.056	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.056	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.056	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.056	ID:1	[INFO: Sender    ] Received ACK for fragment 34
-00:19.056	ID:1	[INFO: Sender    ] ACK received for fragment 34
-00:19.056	ID:1	[INFO: Sender    ] Sending Fragment 36/42 (64 bytes)...
-00:19.056	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.056	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.056	ID:1	[INFO: IPv6 Route] No route found
-00:19.056	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.056	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.065	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.065	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.065	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.065	ID:2	[INFO: Gateway   ] Received Fragment 36/42 (64 bytes)
-00:19.065	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.088	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.088	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.088	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.088	ID:1	[INFO: Sender    ] Received ACK for fragment 35
-00:19.088	ID:1	[INFO: Sender    ] ACK received for fragment 35
-00:19.088	ID:1	[INFO: Sender    ] Sending Fragment 37/42 (64 bytes)...
-00:19.088	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.088	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.088	ID:1	[INFO: IPv6 Route] No route found
-00:19.088	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.088	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.098	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.098	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.098	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.098	ID:2	[INFO: Gateway   ] Received Fragment 37/42 (64 bytes)
-00:19.098	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.107	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.107	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.107	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.107	ID:1	[INFO: Sender    ] Received ACK for fragment 36
-00:19.107	ID:1	[INFO: Sender    ] ACK received for fragment 36
-00:19.107	ID:1	[INFO: Sender    ] Sending Fragment 38/42 (64 bytes)...
-00:19.107	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.107	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.107	ID:1	[INFO: IPv6 Route] No route found
-00:19.107	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.107	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.148	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.148	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.148	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.148	ID:2	[INFO: Gateway   ] Received Fragment 38/42 (64 bytes)
-00:19.148	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.167	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.167	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.167	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.167	ID:1	[INFO: Sender    ] Received ACK for fragment 37
-00:19.167	ID:1	[INFO: Sender    ] ACK received for fragment 37
-00:19.167	ID:1	[INFO: Sender    ] Sending Fragment 39/42 (64 bytes)...
-00:19.167	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.167	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.167	ID:1	[INFO: IPv6 Route] No route found
-00:19.167	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.167	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.206	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.206	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.206	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.206	ID:2	[INFO: Gateway   ] Received Fragment 39/42 (64 bytes)
-00:19.206	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.249	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.249	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.249	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.249	ID:1	[INFO: Sender    ] Received ACK for fragment 38
-00:19.249	ID:1	[INFO: Sender    ] ACK received for fragment 38
-00:19.249	ID:1	[INFO: Sender    ] Sending Fragment 40/42 (64 bytes)...
-00:19.249	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.249	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.249	ID:1	[INFO: IPv6 Route] No route found
-00:19.249	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.249	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.277	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.277	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.277	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.277	ID:2	[INFO: Gateway   ] Received Fragment 40/42 (64 bytes)
-00:19.277	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.295	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.295	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.295	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.295	ID:1	[INFO: Sender    ] Received ACK for fragment 39
-00:19.295	ID:1	[INFO: Sender    ] ACK received for fragment 39
-00:19.295	ID:1	[INFO: Sender    ] Sending Fragment 41/42 (64 bytes)...
-00:19.295	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.295	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.295	ID:1	[INFO: IPv6 Route] No route found
-00:19.295	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.295	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.313	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.313	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.313	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.313	ID:2	[INFO: Gateway   ] Received Fragment 41/42 (64 bytes)
-00:19.313	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.336	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.336	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.336	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.336	ID:1	[INFO: Sender    ] Received ACK for fragment 40
-00:19.336	ID:1	[INFO: Sender    ] ACK received for fragment 40
-00:19.336	ID:1	[INFO: Sender    ] Sending Fragment 42/42 (13 bytes)...
-00:19.336	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
-00:19.336	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.336	ID:1	[INFO: IPv6 Route] No route found
-00:19.336	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.336	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.350	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.350	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.350	ID:2	[INFO: Gateway   ] Received message type 0x04
-00:19.350	ID:2	[INFO: Gateway   ] Received Fragment 42/42 (13 bytes)
-00:19.350	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
-00:19.351	ID:2	[INFO: Gateway   ] Reassembly complete. Verifying signature...
-00:19.351	ID:2	[INFO: Gateway   ] Verifying with key[0]:
-00:19.351	ID:2	Verify Key: [251108041 370523974 226480932 84825653 146225721 366191725 224492815 41107166 ...]
-00:19.351	ID:2	[INFO: Gateway   ] DEBUG: Received Signature w (first 8 coeffs):
-00:19.351	ID:2	Recv Sig.w: [17115 18256 36150 11049 42623 20507 11747 54132 ...]
-00:19.351	ID:2	[INFO: Gateway   ] DEBUG: Received Commitment (first 4 bytes): f145af4c
-00:19.351	ID:2	[INFO: Gateway   ] Ring signature verified: SUCCESS
-00:19.351	ID:2	[INFO: Gateway   ] Decoding LDPC syndrome...
-00:19.351	ID:2	[INFO: Gateway   ] LDPC decoding successful (weight=32380)
-00:19.351	ID:2	[INFO: Gateway   ] Generating session parameters...
-00:19.351	ID:2	[INFO: Gateway   ] Deriving master session key...
-00:19.351	ID:2	[Crypto Core] K_master[0-7] = 33ede09164d753af
-00:19.351	ID:2	[INFO: Gateway   ] Creating session entry...
-00:19.351	ID:2	[INFO: Gateway   ] Session created
-00:19.351	ID:2	[INFO: IPv6      ] Sending packet with length 89 (49)
-00:19.352	ID:2	[INFO: Gateway   ] ACK sent! Session established.
-00:19.395	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.395	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.395	ID:1	[INFO: Sender    ] Received message type 0x05
-00:19.395	ID:1	[INFO: Sender    ] Received ACK for fragment 41
-00:19.395	ID:1	[INFO: Sender    ] ACK received for fragment 41
-00:19.395	ID:1	[INFO: Sender    ] Authentication payload sent successfully!
-00:19.405	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
-00:19.405	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.405	ID:1	[INFO: Sender    ] Received message type 0x02
-00:19.405	ID:1	[INFO: Sender    ] Authentication ACK received!
-00:19.405	ID:1	[INFO: Sender    ] SID: [f81012de...]
-00:19.405	ID:1	[INFO: Sender    ] Deriving master session key...
-00:19.405	ID:1	[Crypto Core] K_master[0-7] = b2e37c3861d81149
-00:19.405	ID:1	[INFO: Sender    ] Session initialized! Sending 10 encrypted messages...
-00:19.405	ID:1	[INFO: Sender    ] Message 1 encrypted (29 bytes)
-00:19.405	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.405	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
-00:19.405	ID:1	[INFO: IPv6 Route] No route found
-00:19.405	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
-00:19.405	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=1
-00:19.406	ID:1	[INFO: Sender    ] Message 2 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=2
-00:19.406	ID:1	[INFO: Sender    ] Message 3 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=3
-00:19.406	ID:1	[INFO: Sender    ] Message 4 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=4
-00:19.406	ID:1	[INFO: Sender    ] Message 5 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=5
-00:19.406	ID:1	[INFO: Sender    ] Message 6 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=6
-00:19.406	ID:1	[INFO: Sender    ] Message 7 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=7
-00:19.406	ID:1	[INFO: Sender    ] Message 8 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=8
-00:19.406	ID:1	[INFO: Sender    ] Message 9 encrypted (29 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=9
-00:19.406	ID:1	[INFO: Sender    ] Message 10 encrypted (30 bytes)
-00:19.406	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
-00:19.406	ID:1	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::201:1:1:1
-00:19.406	ID:1	[INFO: IPv6      ] Receiving UDP packet
-00:19.406	ID:1	[INFO: Sender    ]   -> Sent with counter=10
-00:19.406	ID:1	[INFO: Sender    ] Data transmission complete! Sent 10 messages.
-00:19.406	ID:1	[INFO: Sender    ] 
-00:19.406	ID:1	=== PROTOCOL COMPLETE ===
-00:19.406	ID:1	[INFO: Sender    ] Successfully authenticated and encrypted messages sent!
-00:19.432	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
-00:19.432	ID:2	[INFO: IPv6      ] Receiving UDP packet
-00:19.432	ID:2	[INFO: Gateway   ] Received message type 0x03
-00:19.432	ID:2	[INFO: Gateway   ] 
-00:19.432	ID:2	[Data Phase] Received encrypted message
-00:19.432	ID:2	[INFO: Gateway   ] SID: [f81012de...]
-00:19.432	ID:2	[INFO: Gateway   ] Counter: 1
-00:19.432	ID:2	[INFO: Gateway   ] Session found. Decrypting...
-00:19.432	ID:2	[ERR : Gateway   ] AEAD decryption failed!
-00:23.647	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:23.661	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-00:23.661	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:28.619	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:28.633	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:28.633	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:36.319	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:36.332	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-00:36.332	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-00:57.870	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-00:57.880	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-00:57.880	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-01:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-01:07.017	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-01:07.048	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-01:07.048	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-01:56.567	ID:1	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-01:56.597	ID:2	[INFO: IPv6      ] packet received from fe80::201:1:1:1 to ff02::1a
-01:56.597	ID:2	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-01:58.493	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
-01:58.528	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
-01:58.528	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
-02:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-03:00.236	ID:2	[INFO: Gateway   ] [Status] Gateway operational
-03:28.291	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+ Default route, IP address fe80::202:2:2:2
+11:57.424	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+11:57.425	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=18
+11:57.437	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+11:57.437	ID:2	[INFO: IPv6      ] Receiving UDP packet
+11:57.437	ID:2	[INFO: Gateway   ] Received message type 0x03
+11:57.437	ID:2	[INFO: Gateway   ] 
+11:57.437	ID:2	[Data Phase] Received encrypted message
+11:57.437	ID:2	[INFO: Gateway   ] SID: [5b7eba5e...]
+11:57.437	ID:2	[INFO: Gateway   ] Counter: 18
+11:57.437	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+11:57.437	ID:2	[INFO: Gateway   ] Session decryption successful!
+11:57.437	ID:2	[INFO: Gateway   ] ========================================
+11:57.437	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #18 ***
+11:57.437	ID:2	[INFO: Gateway   ] ========================================
+12:00.240	ID:2	[INFO: Gateway   ] [Status] Gateway operational
+12:02.425	ID:1	[INFO: Sender    ] Message 19 encrypted (30 bytes)
+12:02.425	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+12:02.425	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:02.425	ID:1	[INFO: IPv6 Route] No route found
+12:02.425	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:02.425	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:02.426	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=19
+12:02.465	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:02.465	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:02.465	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:02.465	ID:2	[INFO: Gateway   ] 
+12:02.465	ID:2	[Data Phase] Received encrypted message
+12:02.465	ID:2	[INFO: Gateway   ] SID: [5b7eba5e...]
+12:02.465	ID:2	[INFO: Gateway   ] Counter: 19
+12:02.465	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:02.465	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:02.465	ID:2	[INFO: Gateway   ] ========================================
+12:02.465	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #19 ***
+12:02.465	ID:2	[INFO: Gateway   ] ========================================
+12:07.426	ID:1	[INFO: Sender    ] Message 20 encrypted (30 bytes)
+12:07.426	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+12:07.426	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:07.426	ID:1	[INFO: IPv6 Route] No route found
+12:07.426	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:07.426	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:07.427	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=20
+12:07.461	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:07.461	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:07.461	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:07.461	ID:2	[INFO: Gateway   ] 
+12:07.461	ID:2	[Data Phase] Received encrypted message
+12:07.461	ID:2	[INFO: Gateway   ] SID: [5b7eba5e...]
+12:07.461	ID:2	[INFO: Gateway   ] Counter: 20
+12:07.461	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:07.461	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:07.461	ID:2	[INFO: Gateway   ] ========================================
+12:07.461	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #20 ***
+12:07.461	ID:2	[INFO: Gateway   ] ========================================
+12:12.427	ID:1	[INFO: Sender    ] 
+12:12.427	ID:1	**************************************************
+12:12.427	ID:1	[INFO: Sender    ] * AMORTIZATION THRESHOLD REACHED (20 msgs)      *
+12:12.427	ID:1	[INFO: Sender    ] * SECURE SESSION RENEWAL TRIGGERED               *
+12:12.427	ID:1	[INFO: Sender    ] **************************************************
+12:12.427	ID:1	[INFO: Sender    ] 
+12:12.427	ID:1	[Phase 2] Starting Ring Signature Authentication...
+12:12.427	ID:1	[INFO: Sender    ] Initializing LDPC public key...
+12:12.427	ID:1	[INFO: Sender    ] Generating LDPC error vector...
+12:12.427	ID:1	[INFO: Sender    ] Error vector generated (weight=0)
+12:12.427	ID:1	[INFO: Sender    ] Encoding syndrome...
+12:12.427	ID:1	[INFO: Sender    ] Generating ring signature (N=3 members)...
+12:12.427	ID:1	[INFO: Sender    ] Ring signature generated successfully
+12:12.427	ID:1	[INFO: Sender    ] DEBUG: Sender Public Key sent:
+12:12.427	ID:1	PubKey: [251108041 370523974 226480932 84825653 146225721 366191725 224492815 41107166 ...]
+12:12.427	ID:1	[INFO: Sender    ] DEBUG: Signature w sent (first 8 coeffs):
+12:12.427	ID:1	Sig.w: [46530 35006 31019 54976 26822 39843 43770 3843 ...]
+12:12.427	ID:1	[INFO: Sender    ] DEBUG: Signature Commitment (first 4 bytes): 35bc214c
+12:12.427	ID:1	[INFO: Sender    ] Sending authentication message via fragmentation...
+12:12.427	ID:1	[INFO: Sender    ] Total payload: 2637 bytes (42 fragments)
+12:12.427	ID:1	[INFO: Sender    ] Sending Fragment 1/42 (64 bytes)...
+12:12.427	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.427	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.427	ID:1	[INFO: IPv6 Route] No route found
+12:12.427	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.427	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.472	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.472	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.472	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.472	ID:2	[INFO: Gateway   ] Received Fragment 1/42 (64 bytes)
+12:12.472	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.478	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.478	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.478	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.478	ID:1	[INFO: Sender    ] Received ACK for fragment 0
+12:12.478	ID:1	[INFO: Sender    ] ACK received for fragment 0
+12:12.478	ID:1	[INFO: Sender    ] Sending Fragment 2/42 (64 bytes)...
+12:12.478	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.478	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.478	ID:1	[INFO: IPv6 Route] No route found
+12:12.478	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.478	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.517	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.517	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.517	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.517	ID:2	[INFO: Gateway   ] Received Fragment 2/42 (64 bytes)
+12:12.517	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.534	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.534	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.534	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.534	ID:1	[INFO: Sender    ] Received ACK for fragment 1
+12:12.534	ID:1	[INFO: Sender    ] ACK received for fragment 1
+12:12.534	ID:1	[INFO: Sender    ] Sending Fragment 3/42 (64 bytes)...
+12:12.534	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.534	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.534	ID:1	[INFO: IPv6 Route] No route found
+12:12.534	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.534	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.576	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.576	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.576	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.576	ID:2	[INFO: Gateway   ] Received Fragment 3/42 (64 bytes)
+12:12.576	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.618	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.618	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.618	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.618	ID:1	[INFO: Sender    ] Received ACK for fragment 2
+12:12.618	ID:1	[INFO: Sender    ] ACK received for fragment 2
+12:12.618	ID:1	[INFO: Sender    ] Sending Fragment 4/42 (64 bytes)...
+12:12.618	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.618	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.618	ID:1	[INFO: IPv6 Route] No route found
+12:12.618	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.618	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.652	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.652	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.652	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.652	ID:2	[INFO: Gateway   ] Received Fragment 4/42 (64 bytes)
+12:12.652	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.689	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.689	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.689	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.689	ID:1	[INFO: Sender    ] Received ACK for fragment 3
+12:12.689	ID:1	[INFO: Sender    ] ACK received for fragment 3
+12:12.689	ID:1	[INFO: Sender    ] Sending Fragment 5/42 (64 bytes)...
+12:12.689	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.689	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.689	ID:1	[INFO: IPv6 Route] No route found
+12:12.689	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.689	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.726	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.726	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.726	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.726	ID:2	[INFO: Gateway   ] Received Fragment 5/42 (64 bytes)
+12:12.726	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.771	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.771	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.771	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.771	ID:1	[INFO: Sender    ] Received ACK for fragment 4
+12:12.771	ID:1	[INFO: Sender    ] ACK received for fragment 4
+12:12.771	ID:1	[INFO: Sender    ] Sending Fragment 6/42 (64 bytes)...
+12:12.771	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.771	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.771	ID:1	[INFO: IPv6 Route] No route found
+12:12.771	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.771	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.812	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.812	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.812	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.812	ID:2	[INFO: Gateway   ] Received Fragment 6/42 (64 bytes)
+12:12.812	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.848	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.848	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.848	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.848	ID:1	[INFO: Sender    ] Received ACK for fragment 5
+12:12.848	ID:1	[INFO: Sender    ] ACK received for fragment 5
+12:12.848	ID:1	[INFO: Sender    ] Sending Fragment 7/42 (64 bytes)...
+12:12.848	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.848	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.848	ID:1	[INFO: IPv6 Route] No route found
+12:12.848	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.848	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.857	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.857	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.857	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.857	ID:2	[INFO: Gateway   ] Received Fragment 7/42 (64 bytes)
+12:12.857	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.864	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.864	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.864	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.864	ID:1	[INFO: Sender    ] Received ACK for fragment 6
+12:12.864	ID:1	[INFO: Sender    ] ACK received for fragment 6
+12:12.864	ID:1	[INFO: Sender    ] Sending Fragment 8/42 (64 bytes)...
+12:12.864	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.864	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.864	ID:1	[INFO: IPv6 Route] No route found
+12:12.864	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.864	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.905	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.905	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.905	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.905	ID:2	[INFO: Gateway   ] Received Fragment 8/42 (64 bytes)
+12:12.905	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.926	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.926	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.926	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.926	ID:1	[INFO: Sender    ] Received ACK for fragment 7
+12:12.926	ID:1	[INFO: Sender    ] ACK received for fragment 7
+12:12.926	ID:1	[INFO: Sender    ] Sending Fragment 9/42 (64 bytes)...
+12:12.926	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.926	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.926	ID:1	[INFO: IPv6 Route] No route found
+12:12.926	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.926	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.944	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.944	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.944	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.944	ID:2	[INFO: Gateway   ] Received Fragment 9/42 (64 bytes)
+12:12.944	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.953	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.953	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.953	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.953	ID:1	[INFO: Sender    ] Received ACK for fragment 8
+12:12.953	ID:1	[INFO: Sender    ] ACK received for fragment 8
+12:12.953	ID:1	[INFO: Sender    ] Sending Fragment 10/42 (64 bytes)...
+12:12.953	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.953	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.953	ID:1	[INFO: IPv6 Route] No route found
+12:12.953	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.953	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:12.967	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:12.967	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:12.967	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:12.967	ID:2	[INFO: Gateway   ] Received Fragment 10/42 (64 bytes)
+12:12.967	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:12.973	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:12.973	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:12.973	ID:1	[INFO: Sender    ] Received message type 0x05
+12:12.973	ID:1	[INFO: Sender    ] Received ACK for fragment 9
+12:12.973	ID:1	[INFO: Sender    ] ACK received for fragment 9
+12:12.973	ID:1	[INFO: Sender    ] Sending Fragment 11/42 (64 bytes)...
+12:12.973	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:12.973	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:12.973	ID:1	[INFO: IPv6 Route] No route found
+12:12.973	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:12.973	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.011	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.011	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.011	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.011	ID:2	[INFO: Gateway   ] Received Fragment 11/42 (64 bytes)
+12:13.011	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.017	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.017	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.017	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.017	ID:1	[INFO: Sender    ] Received ACK for fragment 10
+12:13.017	ID:1	[INFO: Sender    ] ACK received for fragment 10
+12:13.017	ID:1	[INFO: Sender    ] Sending Fragment 12/42 (64 bytes)...
+12:13.017	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.017	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.017	ID:1	[INFO: IPv6 Route] No route found
+12:13.017	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.017	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.034	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.034	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.034	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.034	ID:2	[INFO: Gateway   ] Received Fragment 12/42 (64 bytes)
+12:13.034	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.077	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.077	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.077	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.077	ID:1	[INFO: Sender    ] Received ACK for fragment 11
+12:13.077	ID:1	[INFO: Sender    ] ACK received for fragment 11
+12:13.077	ID:1	[INFO: Sender    ] Sending Fragment 13/42 (64 bytes)...
+12:13.077	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.077	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.077	ID:1	[INFO: IPv6 Route] No route found
+12:13.077	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.077	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.086	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.086	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.086	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.086	ID:2	[INFO: Gateway   ] Received Fragment 13/42 (64 bytes)
+12:13.086	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.098	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.098	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.098	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.098	ID:1	[INFO: Sender    ] Received ACK for fragment 12
+12:13.098	ID:1	[INFO: Sender    ] ACK received for fragment 12
+12:13.098	ID:1	[INFO: Sender    ] Sending Fragment 14/42 (64 bytes)...
+12:13.098	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.098	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.098	ID:1	[INFO: IPv6 Route] No route found
+12:13.098	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.098	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.106	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.106	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.106	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.106	ID:2	[INFO: Gateway   ] Received Fragment 14/42 (64 bytes)
+12:13.106	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.143	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.143	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.143	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.143	ID:1	[INFO: Sender    ] Received ACK for fragment 13
+12:13.143	ID:1	[INFO: Sender    ] ACK received for fragment 13
+12:13.143	ID:1	[INFO: Sender    ] Sending Fragment 15/42 (64 bytes)...
+12:13.143	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.143	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.143	ID:1	[INFO: IPv6 Route] No route found
+12:13.143	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.143	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.155	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.155	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.155	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.155	ID:2	[INFO: Gateway   ] Received Fragment 15/42 (64 bytes)
+12:13.155	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.177	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.177	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.177	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.177	ID:1	[INFO: Sender    ] Received ACK for fragment 14
+12:13.177	ID:1	[INFO: Sender    ] ACK received for fragment 14
+12:13.177	ID:1	[INFO: Sender    ] Sending Fragment 16/42 (64 bytes)...
+12:13.177	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.177	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.177	ID:1	[INFO: IPv6 Route] No route found
+12:13.177	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.177	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.186	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.186	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.186	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.186	ID:2	[INFO: Gateway   ] Received Fragment 16/42 (64 bytes)
+12:13.186	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.212	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.212	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.212	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.212	ID:1	[INFO: Sender    ] Received ACK for fragment 15
+12:13.212	ID:1	[INFO: Sender    ] ACK received for fragment 15
+12:13.212	ID:1	[INFO: Sender    ] Sending Fragment 17/42 (64 bytes)...
+12:13.212	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.212	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.212	ID:1	[INFO: IPv6 Route] No route found
+12:13.212	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.212	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.258	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.258	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.258	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.258	ID:2	[INFO: Gateway   ] Received Fragment 17/42 (64 bytes)
+12:13.258	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.281	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.281	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.281	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.281	ID:1	[INFO: Sender    ] Received ACK for fragment 16
+12:13.281	ID:1	[INFO: Sender    ] ACK received for fragment 16
+12:13.281	ID:1	[INFO: Sender    ] Sending Fragment 18/42 (64 bytes)...
+12:13.281	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.281	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.281	ID:1	[INFO: IPv6 Route] No route found
+12:13.281	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.281	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.322	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.322	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.322	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.322	ID:2	[INFO: Gateway   ] Received Fragment 18/42 (64 bytes)
+12:13.322	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.361	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.361	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.361	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.361	ID:1	[INFO: Sender    ] Received ACK for fragment 17
+12:13.361	ID:1	[INFO: Sender    ] ACK received for fragment 17
+12:13.361	ID:1	[INFO: Sender    ] Sending Fragment 19/42 (64 bytes)...
+12:13.361	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.361	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.361	ID:1	[INFO: IPv6 Route] No route found
+12:13.361	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.361	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.384	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.384	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.384	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.384	ID:2	[INFO: Gateway   ] Received Fragment 19/42 (64 bytes)
+12:13.384	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.422	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.422	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.422	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.422	ID:1	[INFO: Sender    ] Received ACK for fragment 18
+12:13.422	ID:1	[INFO: Sender    ] ACK received for fragment 18
+12:13.422	ID:1	[INFO: Sender    ] Sending Fragment 20/42 (64 bytes)...
+12:13.422	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.422	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.422	ID:1	[INFO: IPv6 Route] No route found
+12:13.422	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.422	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.437	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.437	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.437	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.437	ID:2	[INFO: Gateway   ] Received Fragment 20/42 (64 bytes)
+12:13.437	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.468	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.468	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.468	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.468	ID:1	[INFO: Sender    ] Received ACK for fragment 19
+12:13.468	ID:1	[INFO: Sender    ] ACK received for fragment 19
+12:13.468	ID:1	[INFO: Sender    ] Sending Fragment 21/42 (64 bytes)...
+12:13.468	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.468	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.468	ID:1	[INFO: IPv6 Route] No route found
+12:13.468	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.468	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.480	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.480	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.480	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.480	ID:2	[INFO: Gateway   ] Received Fragment 21/42 (64 bytes)
+12:13.480	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.496	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.496	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.496	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.496	ID:1	[INFO: Sender    ] Received ACK for fragment 20
+12:13.496	ID:1	[INFO: Sender    ] ACK received for fragment 20
+12:13.496	ID:1	[INFO: Sender    ] Sending Fragment 22/42 (64 bytes)...
+12:13.496	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.496	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.496	ID:1	[INFO: IPv6 Route] No route found
+12:13.496	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.496	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.511	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.511	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.511	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.511	ID:2	[INFO: Gateway   ] Received Fragment 22/42 (64 bytes)
+12:13.511	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.539	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.539	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.539	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.539	ID:1	[INFO: Sender    ] Received ACK for fragment 21
+12:13.539	ID:1	[INFO: Sender    ] ACK received for fragment 21
+12:13.539	ID:1	[INFO: Sender    ] Sending Fragment 23/42 (64 bytes)...
+12:13.539	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.539	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.539	ID:1	[INFO: IPv6 Route] No route found
+12:13.539	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.539	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.566	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.566	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.566	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.566	ID:2	[INFO: Gateway   ] Received Fragment 23/42 (64 bytes)
+12:13.566	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.611	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.611	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.611	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.611	ID:1	[INFO: Sender    ] Received ACK for fragment 22
+12:13.611	ID:1	[INFO: Sender    ] ACK received for fragment 22
+12:13.611	ID:1	[INFO: Sender    ] Sending Fragment 24/42 (64 bytes)...
+12:13.611	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.611	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.611	ID:1	[INFO: IPv6 Route] No route found
+12:13.611	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.611	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.627	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.627	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.627	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.627	ID:2	[INFO: Gateway   ] Received Fragment 24/42 (64 bytes)
+12:13.627	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.645	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.645	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.645	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.645	ID:1	[INFO: Sender    ] Received ACK for fragment 23
+12:13.645	ID:1	[INFO: Sender    ] ACK received for fragment 23
+12:13.645	ID:1	[INFO: Sender    ] Sending Fragment 25/42 (64 bytes)...
+12:13.645	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.645	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.645	ID:1	[INFO: IPv6 Route] No route found
+12:13.645	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.645	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.687	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.687	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.687	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.687	ID:2	[INFO: Gateway   ] Received Fragment 25/42 (64 bytes)
+12:13.687	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.704	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.704	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.704	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.704	ID:1	[INFO: Sender    ] Received ACK for fragment 24
+12:13.704	ID:1	[INFO: Sender    ] ACK received for fragment 24
+12:13.704	ID:1	[INFO: Sender    ] Sending Fragment 26/42 (64 bytes)...
+12:13.704	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.704	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.704	ID:1	[INFO: IPv6 Route] No route found
+12:13.704	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.704	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.748	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.748	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.748	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.748	ID:2	[INFO: Gateway   ] Received Fragment 26/42 (64 bytes)
+12:13.748	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.757	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.757	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.757	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.757	ID:1	[INFO: Sender    ] Received ACK for fragment 25
+12:13.757	ID:1	[INFO: Sender    ] ACK received for fragment 25
+12:13.757	ID:1	[INFO: Sender    ] Sending Fragment 27/42 (64 bytes)...
+12:13.757	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.757	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.757	ID:1	[INFO: IPv6 Route] No route found
+12:13.757	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.757	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.772	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.772	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.772	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.772	ID:2	[INFO: Gateway   ] Received Fragment 27/42 (64 bytes)
+12:13.772	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.787	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.787	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.787	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.787	ID:1	[INFO: Sender    ] Received ACK for fragment 26
+12:13.787	ID:1	[INFO: Sender    ] ACK received for fragment 26
+12:13.787	ID:1	[INFO: Sender    ] Sending Fragment 28/42 (64 bytes)...
+12:13.787	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.787	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.787	ID:1	[INFO: IPv6 Route] No route found
+12:13.787	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.787	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.804	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.804	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.804	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.804	ID:2	[INFO: Gateway   ] Received Fragment 28/42 (64 bytes)
+12:13.804	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.825	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.825	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.825	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.825	ID:1	[INFO: Sender    ] Received ACK for fragment 27
+12:13.825	ID:1	[INFO: Sender    ] ACK received for fragment 27
+12:13.825	ID:1	[INFO: Sender    ] Sending Fragment 29/42 (64 bytes)...
+12:13.825	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.825	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.825	ID:1	[INFO: IPv6 Route] No route found
+12:13.825	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.825	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.855	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.855	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.855	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.855	ID:2	[INFO: Gateway   ] Received Fragment 29/42 (64 bytes)
+12:13.855	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.872	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.872	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.872	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.872	ID:1	[INFO: Sender    ] Received ACK for fragment 28
+12:13.872	ID:1	[INFO: Sender    ] ACK received for fragment 28
+12:13.872	ID:1	[INFO: Sender    ] Sending Fragment 30/42 (64 bytes)...
+12:13.872	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.872	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.872	ID:1	[INFO: IPv6 Route] No route found
+12:13.872	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.872	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.886	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.886	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.886	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.886	ID:2	[INFO: Gateway   ] Received Fragment 30/42 (64 bytes)
+12:13.886	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:13.929	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:13.929	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:13.929	ID:1	[INFO: Sender    ] Received message type 0x05
+12:13.929	ID:1	[INFO: Sender    ] Received ACK for fragment 29
+12:13.929	ID:1	[INFO: Sender    ] ACK received for fragment 29
+12:13.929	ID:1	[INFO: Sender    ] Sending Fragment 31/42 (64 bytes)...
+12:13.929	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:13.929	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:13.929	ID:1	[INFO: IPv6 Route] No route found
+12:13.929	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:13.929	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:13.974	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:13.974	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:13.974	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:13.974	ID:2	[INFO: Gateway   ] Received Fragment 31/42 (64 bytes)
+12:13.974	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.018	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.018	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.018	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.018	ID:1	[INFO: Sender    ] Received ACK for fragment 30
+12:14.018	ID:1	[INFO: Sender    ] ACK received for fragment 30
+12:14.018	ID:1	[INFO: Sender    ] Sending Fragment 32/42 (64 bytes)...
+12:14.018	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.018	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.018	ID:1	[INFO: IPv6 Route] No route found
+12:14.018	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.018	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.063	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.063	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.063	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.063	ID:2	[INFO: Gateway   ] Received Fragment 32/42 (64 bytes)
+12:14.063	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.071	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.071	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.071	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.071	ID:1	[INFO: Sender    ] Received ACK for fragment 31
+12:14.071	ID:1	[INFO: Sender    ] ACK received for fragment 31
+12:14.071	ID:1	[INFO: Sender    ] Sending Fragment 33/42 (64 bytes)...
+12:14.071	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.071	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.071	ID:1	[INFO: IPv6 Route] No route found
+12:14.071	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.071	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.083	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.083	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.083	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.083	ID:2	[INFO: Gateway   ] Received Fragment 33/42 (64 bytes)
+12:14.083	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.106	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.106	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.106	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.106	ID:1	[INFO: Sender    ] Received ACK for fragment 32
+12:14.106	ID:1	[INFO: Sender    ] ACK received for fragment 32
+12:14.106	ID:1	[INFO: Sender    ] Sending Fragment 34/42 (64 bytes)...
+12:14.106	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.106	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.106	ID:1	[INFO: IPv6 Route] No route found
+12:14.106	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.106	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.116	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.116	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.116	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.116	ID:2	[INFO: Gateway   ] Received Fragment 34/42 (64 bytes)
+12:14.116	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.127	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.127	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.127	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.127	ID:1	[INFO: Sender    ] Received ACK for fragment 33
+12:14.127	ID:1	[INFO: Sender    ] ACK received for fragment 33
+12:14.127	ID:1	[INFO: Sender    ] Sending Fragment 35/42 (64 bytes)...
+12:14.127	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.127	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.127	ID:1	[INFO: IPv6 Route] No route found
+12:14.127	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.127	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.140	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.140	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.140	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.140	ID:2	[INFO: Gateway   ] Received Fragment 35/42 (64 bytes)
+12:14.140	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.146	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.146	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.146	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.146	ID:1	[INFO: Sender    ] Received ACK for fragment 34
+12:14.146	ID:1	[INFO: Sender    ] ACK received for fragment 34
+12:14.146	ID:1	[INFO: Sender    ] Sending Fragment 36/42 (64 bytes)...
+12:14.146	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.146	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.146	ID:1	[INFO: IPv6 Route] No route found
+12:14.146	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.146	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.187	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.187	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.187	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.187	ID:2	[INFO: Gateway   ] Received Fragment 36/42 (64 bytes)
+12:14.187	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.215	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.215	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.215	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.215	ID:1	[INFO: Sender    ] Received ACK for fragment 35
+12:14.215	ID:1	[INFO: Sender    ] ACK received for fragment 35
+12:14.215	ID:1	[INFO: Sender    ] Sending Fragment 37/42 (64 bytes)...
+12:14.215	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.215	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.215	ID:1	[INFO: IPv6 Route] No route found
+12:14.215	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.215	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.226	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.226	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.226	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.226	ID:2	[INFO: Gateway   ] Received Fragment 37/42 (64 bytes)
+12:14.226	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.248	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.248	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.248	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.248	ID:1	[INFO: Sender    ] Received ACK for fragment 36
+12:14.248	ID:1	[INFO: Sender    ] ACK received for fragment 36
+12:14.248	ID:1	[INFO: Sender    ] Sending Fragment 38/42 (64 bytes)...
+12:14.248	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.248	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.248	ID:1	[INFO: IPv6 Route] No route found
+12:14.248	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.248	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.289	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.289	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.289	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.289	ID:2	[INFO: Gateway   ] Received Fragment 38/42 (64 bytes)
+12:14.289	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.311	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.311	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.311	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.311	ID:1	[INFO: Sender    ] Received ACK for fragment 37
+12:14.311	ID:1	[INFO: Sender    ] ACK received for fragment 37
+12:14.311	ID:1	[INFO: Sender    ] Sending Fragment 39/42 (64 bytes)...
+12:14.311	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.311	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.311	ID:1	[INFO: IPv6 Route] No route found
+12:14.311	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.311	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.331	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.331	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.331	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.331	ID:2	[INFO: Gateway   ] Received Fragment 39/42 (64 bytes)
+12:14.331	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.360	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.360	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.360	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.360	ID:1	[INFO: Sender    ] Received ACK for fragment 38
+12:14.360	ID:1	[INFO: Sender    ] ACK received for fragment 38
+12:14.360	ID:1	[INFO: Sender    ] Sending Fragment 40/42 (64 bytes)...
+12:14.360	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.360	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.360	ID:1	[INFO: IPv6 Route] No route found
+12:14.360	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.360	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.380	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.380	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.380	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.380	ID:2	[INFO: Gateway   ] Received Fragment 40/42 (64 bytes)
+12:14.380	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.401	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.401	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.401	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.401	ID:1	[INFO: Sender    ] Received ACK for fragment 39
+12:14.401	ID:1	[INFO: Sender    ] ACK received for fragment 39
+12:14.401	ID:1	[INFO: Sender    ] Sending Fragment 41/42 (64 bytes)...
+12:14.401	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.401	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.401	ID:1	[INFO: IPv6 Route] No route found
+12:14.401	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.401	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.435	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.435	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.435	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.435	ID:2	[INFO: Gateway   ] Received Fragment 41/42 (64 bytes)
+12:14.435	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.467	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.467	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.467	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.467	ID:1	[INFO: Sender    ] Received ACK for fragment 40
+12:14.467	ID:1	[INFO: Sender    ] ACK received for fragment 40
+12:14.467	ID:1	[INFO: Sender    ] Sending Fragment 42/42 (13 bytes)...
+12:14.467	ID:1	[INFO: IPv6      ] Sending packet with length 121 (81)
+12:14.467	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.467	ID:1	[INFO: IPv6 Route] No route found
+12:14.467	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.467	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.503	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.503	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.503	ID:2	[INFO: Gateway   ] Received message type 0x04
+12:14.503	ID:2	[INFO: Gateway   ] Received Fragment 42/42 (13 bytes)
+12:14.503	ID:2	[INFO: IPv6      ] Sending packet with length 51 (11)
+12:14.504	ID:2	[INFO: Gateway   ] Reassembly complete. Verifying signature...
+12:14.504	ID:2	[INFO: Gateway   ] Verifying with key[0]:
+12:14.504	ID:2	Verify Key: [251108041 370523974 226480932 84825653 146225721 366191725 224492815 41107166 ...]
+12:14.504	ID:2	[INFO: Gateway   ] DEBUG: Received Signature w (first 8 coeffs):
+12:14.504	ID:2	Recv Sig.w: [46530 35006 31019 54976 26822 39843 43770 3843 ...]
+12:14.504	ID:2	[INFO: Gateway   ] DEBUG: Received Commitment (first 4 bytes): 35bc214c
+12:14.504	ID:2	[INFO: Gateway   ] Ring signature verified: SUCCESS
+12:14.504	ID:2	[INFO: Gateway   ] Decoding LDPC syndrome...
+12:14.504	ID:2	[INFO: Gateway   ] LDPC decoding successful (weight=0)
+12:14.504	ID:2	[INFO: Gateway   ] Generating session parameters...
+12:14.504	ID:2	[INFO: Gateway   ] Deriving master session key...
+12:14.504	ID:2	[Crypto Core] K_master[0-7] = 9de119864576c6ba
+12:14.504	ID:2	[INFO: Gateway   ] Creating session entry...
+12:14.504	ID:2	[INFO: Gateway   ] Session created
+12:14.504	ID:2	[INFO: IPv6      ] Sending packet with length 89 (49)
+12:14.505	ID:2	[INFO: Gateway   ] ACK sent! Session established.
+12:14.528	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.528	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.528	ID:1	[INFO: Sender    ] Received message type 0x05
+12:14.528	ID:1	[INFO: Sender    ] Received ACK for fragment 41
+12:14.528	ID:1	[INFO: Sender    ] ACK received for fragment 41
+12:14.528	ID:1	[INFO: Sender    ] Authentication payload sent successfully!
+12:14.535	ID:1	[INFO: IPv6      ] packet received from fd00::202:2:2:2 to fd00::201:1:1:1
+12:14.535	ID:1	[INFO: IPv6      ] Receiving UDP packet
+12:14.535	ID:1	[INFO: Sender    ] Received message type 0x02
+12:14.535	ID:1	[INFO: Sender    ] Authentication ACK received!
+12:14.535	ID:1	[INFO: Sender    ] SID: [d9541354...]
+12:14.535	ID:1	[INFO: Sender    ] Deriving master session key...
+12:14.535	ID:1	[Crypto Core] K_master[0-7] = 9de119864576c6ba
+12:14.535	ID:1	[INFO: Sender    ] Session initialized! Entering sequence data phase...
+12:14.535	ID:1	[INFO: Sender    ] 
+12:14.535	ID:1	=== AUTHENTICATION COMPLETE ===
+12:14.535	ID:1	[INFO: Sender    ] [Phase 3] Starting Amortized Periodic Data Transmission...
+12:14.535	ID:1	[INFO: Sender    ] Message 1 encrypted (29 bytes)
+12:14.535	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:14.535	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:14.535	ID:1	[INFO: IPv6 Route] No route found
+12:14.535	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:14.535	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:14.536	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=1
+12:14.544	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:14.544	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:14.544	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:14.544	ID:2	[INFO: Gateway   ] 
+12:14.544	ID:2	[Data Phase] Received encrypted message
+12:14.544	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:14.544	ID:2	[INFO: Gateway   ] Counter: 1
+12:14.544	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:14.544	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:14.544	ID:2	[INFO: Gateway   ] ========================================
+12:14.544	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #1 ***
+12:14.544	ID:2	[INFO: Gateway   ] ========================================
+12:19.536	ID:1	[INFO: Sender    ] Message 2 encrypted (29 bytes)
+12:19.536	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:19.536	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:19.536	ID:1	[INFO: IPv6 Route] No route found
+12:19.536	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:19.536	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:19.537	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=2
+12:19.549	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:19.549	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:19.549	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:19.549	ID:2	[INFO: Gateway   ] 
+12:19.549	ID:2	[Data Phase] Received encrypted message
+12:19.549	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:19.549	ID:2	[INFO: Gateway   ] Counter: 2
+12:19.549	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:19.549	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:19.549	ID:2	[INFO: Gateway   ] ========================================
+12:19.549	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #2 ***
+12:19.549	ID:2	[INFO: Gateway   ] ========================================
+12:24.537	ID:1	[INFO: Sender    ] Message 3 encrypted (29 bytes)
+12:24.537	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:24.537	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:24.537	ID:1	[INFO: IPv6 Route] No route found
+12:24.537	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:24.537	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:24.538	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=3
+12:24.573	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:24.573	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:24.573	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:24.573	ID:2	[INFO: Gateway   ] 
+12:24.573	ID:2	[Data Phase] Received encrypted message
+12:24.573	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:24.573	ID:2	[INFO: Gateway   ] Counter: 3
+12:24.573	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:24.573	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:24.573	ID:2	[INFO: Gateway   ] ========================================
+12:24.573	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #3 ***
+12:24.573	ID:2	[INFO: Gateway   ] ========================================
+12:29.538	ID:1	[INFO: Sender    ] Message 4 encrypted (29 bytes)
+12:29.538	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:29.538	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:29.538	ID:1	[INFO: IPv6 Route] No route found
+12:29.538	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:29.538	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:29.539	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=4
+12:29.561	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:29.561	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:29.561	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:29.561	ID:2	[INFO: Gateway   ] 
+12:29.561	ID:2	[Data Phase] Received encrypted message
+12:29.561	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:29.561	ID:2	[INFO: Gateway   ] Counter: 4
+12:29.561	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:29.561	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:29.561	ID:2	[INFO: Gateway   ] ========================================
+12:29.561	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #4 ***
+12:29.561	ID:2	[INFO: Gateway   ] ========================================
+12:34.539	ID:1	[INFO: Sender    ] Message 5 encrypted (29 bytes)
+12:34.539	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:34.539	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:34.539	ID:1	[INFO: IPv6 Route] No route found
+12:34.539	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:34.539	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:34.540	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=5
+12:34.560	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:34.560	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:34.560	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:34.560	ID:2	[INFO: Gateway   ] 
+12:34.560	ID:2	[Data Phase] Received encrypted message
+12:34.560	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:34.560	ID:2	[INFO: Gateway   ] Counter: 5
+12:34.560	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:34.560	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:34.560	ID:2	[INFO: Gateway   ] ========================================
+12:34.560	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #5 ***
+12:34.560	ID:2	[INFO: Gateway   ] ========================================
+12:39.540	ID:1	[INFO: Sender    ] Message 6 encrypted (29 bytes)
+12:39.540	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:39.540	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:39.540	ID:1	[INFO: IPv6 Route] No route found
+12:39.540	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:39.540	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:39.541	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=6
+12:39.546	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:39.546	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:39.546	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:39.546	ID:2	[INFO: Gateway   ] 
+12:39.546	ID:2	[Data Phase] Received encrypted message
+12:39.546	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:39.546	ID:2	[INFO: Gateway   ] Counter: 6
+12:39.546	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:39.546	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:39.546	ID:2	[INFO: Gateway   ] ========================================
+12:39.546	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #6 ***
+12:39.546	ID:2	[INFO: Gateway   ] ========================================
+12:44.541	ID:1	[INFO: Sender    ] Message 7 encrypted (29 bytes)
+12:44.541	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:44.541	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:44.541	ID:1	[INFO: IPv6 Route] No route found
+12:44.541	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:44.541	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:44.542	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=7
+12:44.571	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:44.571	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:44.571	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:44.571	ID:2	[INFO: Gateway   ] 
+12:44.571	ID:2	[Data Phase] Received encrypted message
+12:44.571	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:44.571	ID:2	[INFO: Gateway   ] Counter: 7
+12:44.571	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:44.571	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:44.571	ID:2	[INFO: Gateway   ] ========================================
+12:44.571	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #7 ***
+12:44.571	ID:2	[INFO: Gateway   ] ========================================
+12:49.542	ID:1	[INFO: Sender    ] Message 8 encrypted (29 bytes)
+12:49.542	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:49.542	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:49.542	ID:1	[INFO: IPv6 Route] No route found
+12:49.542	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:49.542	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:49.543	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=8
+12:49.573	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:49.573	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:49.573	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:49.573	ID:2	[INFO: Gateway   ] 
+12:49.573	ID:2	[Data Phase] Received encrypted message
+12:49.573	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:49.573	ID:2	[INFO: Gateway   ] Counter: 8
+12:49.573	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:49.573	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:49.573	ID:2	[INFO: Gateway   ] ========================================
+12:49.573	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #8 ***
+12:49.573	ID:2	[INFO: Gateway   ] ========================================
+12:54.543	ID:1	[INFO: Sender    ] Message 9 encrypted (29 bytes)
+12:54.543	ID:1	[INFO: IPv6      ] Sending packet with length 92 (52)
+12:54.543	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:54.543	ID:1	[INFO: IPv6 Route] No route found
+12:54.543	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:54.543	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:54.544	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=9
+12:54.580	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:54.580	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:54.580	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:54.580	ID:2	[INFO: Gateway   ] 
+12:54.580	ID:2	[Data Phase] Received encrypted message
+12:54.580	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:54.580	ID:2	[INFO: Gateway   ] Counter: 9
+12:54.580	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:54.580	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:54.580	ID:2	[INFO: Gateway   ] ========================================
+12:54.580	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #9 ***
+12:54.580	ID:2	[INFO: Gateway   ] ========================================
+12:59.544	ID:1	[INFO: Sender    ] Message 10 encrypted (30 bytes)
+12:59.544	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+12:59.544	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+12:59.544	ID:1	[INFO: IPv6 Route] No route found
+12:59.544	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+12:59.544	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+12:59.545	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=10
+12:59.560	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+12:59.560	ID:2	[INFO: IPv6      ] Receiving UDP packet
+12:59.560	ID:2	[INFO: Gateway   ] Received message type 0x03
+12:59.560	ID:2	[INFO: Gateway   ] 
+12:59.560	ID:2	[Data Phase] Received encrypted message
+12:59.560	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+12:59.560	ID:2	[INFO: Gateway   ] Counter: 10
+12:59.560	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+12:59.560	ID:2	[INFO: Gateway   ] Session decryption successful!
+12:59.560	ID:2	[INFO: Gateway   ] ========================================
+12:59.560	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #10 ***
+12:59.560	ID:2	[INFO: Gateway   ] ========================================
+13:00.240	ID:2	[INFO: Gateway   ] [Status] Gateway operational
+13:04.545	ID:1	[INFO: Sender    ] Message 11 encrypted (30 bytes)
+13:04.545	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:04.545	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:04.545	ID:1	[INFO: IPv6 Route] No route found
+13:04.545	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:04.545	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:04.546	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=11
+13:04.566	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:04.566	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:04.566	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:04.566	ID:2	[INFO: Gateway   ] 
+13:04.566	ID:2	[Data Phase] Received encrypted message
+13:04.566	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:04.566	ID:2	[INFO: Gateway   ] Counter: 11
+13:04.566	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:04.566	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:04.566	ID:2	[INFO: Gateway   ] ========================================
+13:04.566	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #11 ***
+13:04.566	ID:2	[INFO: Gateway   ] ========================================
+13:09.546	ID:1	[INFO: Sender    ] Message 12 encrypted (30 bytes)
+13:09.546	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:09.546	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:09.546	ID:1	[INFO: IPv6 Route] No route found
+13:09.546	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:09.546	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:09.547	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=12
+13:09.573	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:09.573	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:09.573	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:09.573	ID:2	[INFO: Gateway   ] 
+13:09.573	ID:2	[Data Phase] Received encrypted message
+13:09.573	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:09.573	ID:2	[INFO: Gateway   ] Counter: 12
+13:09.573	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:09.573	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:09.573	ID:2	[INFO: Gateway   ] ========================================
+13:09.573	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #12 ***
+13:09.573	ID:2	[INFO: Gateway   ] ========================================
+13:14.547	ID:1	[INFO: Sender    ] Message 13 encrypted (30 bytes)
+13:14.547	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:14.547	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:14.547	ID:1	[INFO: IPv6 Route] No route found
+13:14.547	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:14.547	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:14.548	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=13
+13:14.576	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:14.576	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:14.576	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:14.576	ID:2	[INFO: Gateway   ] 
+13:14.576	ID:2	[Data Phase] Received encrypted message
+13:14.576	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:14.576	ID:2	[INFO: Gateway   ] Counter: 13
+13:14.576	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:14.576	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:14.576	ID:2	[INFO: Gateway   ] ========================================
+13:14.576	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #13 ***
+13:14.576	ID:2	[INFO: Gateway   ] ========================================
+13:19.548	ID:1	[INFO: Sender    ] Message 14 encrypted (30 bytes)
+13:19.548	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:19.548	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:19.548	ID:1	[INFO: IPv6 Route] No route found
+13:19.548	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:19.548	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:19.549	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=14
+13:19.554	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:19.554	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:19.554	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:19.554	ID:2	[INFO: Gateway   ] 
+13:19.554	ID:2	[Data Phase] Received encrypted message
+13:19.554	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:19.554	ID:2	[INFO: Gateway   ] Counter: 14
+13:19.554	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:19.554	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:19.554	ID:2	[INFO: Gateway   ] ========================================
+13:19.554	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #14 ***
+13:19.554	ID:2	[INFO: Gateway   ] ========================================
+13:24.549	ID:1	[INFO: Sender    ] Message 15 encrypted (30 bytes)
+13:24.549	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:24.549	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:24.549	ID:1	[INFO: IPv6 Route] No route found
+13:24.549	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:24.549	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:24.550	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=15
+13:24.592	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:24.592	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:24.592	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:24.592	ID:2	[INFO: Gateway   ] 
+13:24.592	ID:2	[Data Phase] Received encrypted message
+13:24.592	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:24.592	ID:2	[INFO: Gateway   ] Counter: 15
+13:24.592	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:24.592	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:24.592	ID:2	[INFO: Gateway   ] ========================================
+13:24.592	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #15 ***
+13:24.592	ID:2	[INFO: Gateway   ] ========================================
+13:29.550	ID:1	[INFO: Sender    ] Message 16 encrypted (30 bytes)
+13:29.550	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:29.550	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:29.550	ID:1	[INFO: IPv6 Route] No route found
+13:29.550	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:29.550	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:29.551	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=16
+13:29.581	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:29.581	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:29.581	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:29.581	ID:2	[INFO: Gateway   ] 
+13:29.581	ID:2	[Data Phase] Received encrypted message
+13:29.581	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:29.581	ID:2	[INFO: Gateway   ] Counter: 16
+13:29.581	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:29.581	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:29.581	ID:2	[INFO: Gateway   ] ========================================
+13:29.581	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #16 ***
+13:29.581	ID:2	[INFO: Gateway   ] ========================================
+13:34.551	ID:1	[INFO: Sender    ] Message 17 encrypted (30 bytes)
+13:34.551	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:34.551	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:34.551	ID:1	[INFO: IPv6 Route] No route found
+13:34.551	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:34.551	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:34.552	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=17
+13:34.592	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:34.592	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:34.592	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:34.592	ID:2	[INFO: Gateway   ] 
+13:34.592	ID:2	[Data Phase] Received encrypted message
+13:34.592	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:34.592	ID:2	[INFO: Gateway   ] Counter: 17
+13:34.592	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:34.592	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:34.592	ID:2	[INFO: Gateway   ] ========================================
+13:34.592	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #17 ***
+13:34.592	ID:2	[INFO: Gateway   ] ========================================
+13:39.552	ID:1	[INFO: Sender    ] Message 18 encrypted (30 bytes)
+13:39.552	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:39.552	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:39.552	ID:1	[INFO: IPv6 Route] No route found
+13:39.552	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:39.552	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:39.553	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=18
+13:39.584	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:39.584	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:39.584	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:39.584	ID:2	[INFO: Gateway   ] 
+13:39.584	ID:2	[Data Phase] Received encrypted message
+13:39.584	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:39.584	ID:2	[INFO: Gateway   ] Counter: 18
+13:39.584	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:39.584	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:39.584	ID:2	[INFO: Gateway   ] ========================================
+13:39.584	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #18 ***
+13:39.584	ID:2	[INFO: Gateway   ] ========================================
+13:44.553	ID:1	[INFO: Sender    ] Message 19 encrypted (30 bytes)
+13:44.553	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:44.553	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:44.553	ID:1	[INFO: IPv6 Route] No route found
+13:44.553	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:44.553	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:44.554	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=19
+13:44.577	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:44.577	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:44.577	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:44.577	ID:2	[INFO: Gateway   ] 
+13:44.577	ID:2	[Data Phase] Received encrypted message
+13:44.577	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:44.577	ID:2	[INFO: Gateway   ] Counter: 19
+13:44.577	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:44.577	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:44.577	ID:2	[INFO: Gateway   ] ========================================
+13:44.577	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #19 ***
+13:44.577	ID:2	[INFO: Gateway   ] ========================================
+13:48.947	ID:2	[INFO: ICMPv6    ] Sending ICMPv6 packet to ff02::1a, type 155, code 1, len 72
+13:48.984	ID:1	[INFO: IPv6      ] packet received from fe80::202:2:2:2 to ff02::1a
+13:48.984	ID:1	[INFO: IPv6      ] icmpv6 input length 116 type: 155 
+13:49.554	ID:1	[INFO: Sender    ] Message 20 encrypted (30 bytes)
+13:49.554	ID:1	[INFO: IPv6      ] Sending packet with length 93 (53)
+13:49.554	ID:1	[INFO: IPv6 Route] Looking up route for fd00::202:2:2:2
+13:49.554	ID:1	[INFO: IPv6 Route] No route found
+13:49.554	ID:1	[INFO: IPv6 Route] Default route, IP address fe80::202:2:2:2
+13:49.554	ID:1	[INFO: IPv6 Route] Default route found, IP address fe80::202:2:2:2
+13:49.555	ID:1	[INFO: Sender    ]   -> UDP Packet Sent with counter=20
+13:49.565	ID:2	[INFO: IPv6      ] packet received from fd00::201:1:1:1 to fd00::202:2:2:2
+13:49.565	ID:2	[INFO: IPv6      ] Receiving UDP packet
+13:49.565	ID:2	[INFO: Gateway   ] Received message type 0x03
+13:49.565	ID:2	[INFO: Gateway   ] 
+13:49.565	ID:2	[Data Phase] Received encrypted message
+13:49.565	ID:2	[INFO: Gateway   ] SID: [d9541354...]
+13:49.565	ID:2	[INFO: Gateway   ] Counter: 20
+13:49.565	ID:2	[INFO: Gateway   ] Session found. Decrypting...
+13:49.565	ID:2	[INFO: Gateway   ] Session decryption successful!
+13:49.565	ID:2	[INFO: Gateway   ] ========================================
+13:49.565	ID:2	[INFO: Gateway   ] *** DECRYPTED MESSAGE: Hello IoT #20 ***
+13:49.565	ID:2	[INFO: Gateway   ] ========================================

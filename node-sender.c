@@ -65,7 +65,8 @@ static uint8_t syndrome[LDPC_ROWS / 8];
 
 /* Message to encrypt */
 static const char *secret_message = "Hello IoT";
-#define NUM_MESSAGES 10
+#define RENEW_THRESHOLD 20   /* Renew session after 20 messages */
+#define DATA_INTERVAL 5      /* Send 1 message every 5 seconds */
 
 PROCESS(sender_process, "Ring-LWE Sender Process");
 AUTOSTART_PROCESSES(&sender_process);
@@ -122,57 +123,7 @@ udp_rx_callback(struct simple_udp_connection *c,
         /* Zeroize error vector */
         secure_zero(&auth_error_vector, sizeof(ErrorVector));
         
-        LOG_INFO("Session initialized! Sending %d encrypted messages...\n", NUM_MESSAGES);
-        
-        /* Send multiple messages */
-        int msg_num;
-        for (msg_num = 0; msg_num < NUM_MESSAGES; msg_num++) {
-            char msg_buf[64];
-            snprintf(msg_buf, sizeof(msg_buf), "%s #%d", secret_message, msg_num + 1);
-            
-            /* Session encrypt */
-            uint8_t ciphertext[MESSAGE_MAX_SIZE + AEAD_TAG_LEN];
-            size_t cipher_len;
-            
-            int ret = session_encrypt(&session_ctx,
-                                     (uint8_t *)msg_buf, strlen(msg_buf) + 1,
-                                     ciphertext, &cipher_len);
-            
-            if (ret != 0) {
-                LOG_ERR("Encryption failed for message %d!\n", msg_num + 1);
-                break;
-            }
-            
-            LOG_INFO("Message %d encrypted (%u bytes)\n", msg_num + 1, (unsigned)cipher_len);
-            
-            /* Pack wire format */
-            uint8_t wire_buf[256];
-            size_t offset = 0;
-            
-            wire_buf[offset++] = MSG_TYPE_DATA;
-            memcpy(wire_buf + offset, session_ctx.sid, SID_LEN);
-            offset += SID_LEN;
-            
-            wire_buf[offset++] = (session_ctx.counter >> 24) & 0xFF;
-            wire_buf[offset++] = (session_ctx.counter >> 16) & 0xFF;
-            wire_buf[offset++] = (session_ctx.counter >> 8) & 0xFF;
-            wire_buf[offset++] = session_ctx.counter & 0xFF;
-            
-            wire_buf[offset++] = (cipher_len >> 8) & 0xFF;
-            wire_buf[offset++] = cipher_len & 0xFF;
-            
-            memcpy(wire_buf + offset, ciphertext, cipher_len);
-            offset += cipher_len;
-            
-            /* Send to gateway */
-            simple_udp_sendto(&udp_conn, wire_buf, offset, sender_addr);
-            
-            LOG_INFO("  -> Sent with counter=%u\n", (unsigned)session_ctx.counter);
-            
-            session_ctx.counter++;
-        }
-        
-        LOG_INFO("Data transmission complete! Sent %d messages.\n", NUM_MESSAGES);
+        LOG_INFO("Session initialized! Entering sequence data phase...\n");
         process_poll(&sender_process);
     }
 }
@@ -237,8 +188,10 @@ PROCESS_THREAD(sender_process, ev, data)
     etimer_set(&periodic_timer, 10 * CLOCK_SECOND);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
     
-    /* ===== AUTHENTICATION PHASE ===== */
-    LOG_INFO("\n[Phase 2] Starting Ring Signature Authentication...\n");
+    // RENEW LOOP: Continuously authenticate and send data
+    while(1) {
+        /* ===== AUTHENTICATION PHASE ===== */
+        LOG_INFO("\n[Phase 2] Starting Ring Signature Authentication...\n");
     
     /* Generate LDPC public key */
     LOG_INFO("Initializing LDPC public key...\n");
@@ -393,13 +346,76 @@ PROCESS_THREAD(sender_process, ev, data)
                             etimer_expired(&periodic_timer));
     
         if (etimer_expired(&periodic_timer)) {
-            LOG_ERR("Authentication timeout!\n");
-            PROCESS_EXIT();
+            LOG_ERR("Authentication timeout! Retrying...\n");
+            continue; // Loop back and try authenticating again
         }
     }
     
-    LOG_INFO("\n=== PROTOCOL COMPLETE ===\n");
-    LOG_INFO("Successfully authenticated and encrypted messages sent!\n");
+    LOG_INFO("\n=== AUTHENTICATION COMPLETE ===\n");
     
-    PROCESS_END();
+    /* ===== DATA TRANSMISSION PHASE ===== */
+    LOG_INFO("[Phase 3] Starting Amortized Periodic Data Transmission...\n");
+    
+    while(session_ctx.active && session_ctx.counter <= RENEW_THRESHOLD) {
+        char msg_buf[64];
+        snprintf(msg_buf, sizeof(msg_buf), "%s #%u", secret_message, (unsigned)session_ctx.counter);
+        
+        /* Session encrypt */
+        uint8_t ciphertext[MESSAGE_MAX_SIZE + AEAD_TAG_LEN];
+        size_t cipher_len;
+        
+        int ret = session_encrypt(&session_ctx,
+                                 (uint8_t *)msg_buf, strlen(msg_buf) + 1,
+                                 ciphertext, &cipher_len);
+        
+        if (ret != 0) {
+            LOG_ERR("Encryption failed for message %u!\n", (unsigned)session_ctx.counter);
+            break;
+        }
+        
+        LOG_INFO("Message %u encrypted (%u bytes)\n", (unsigned)session_ctx.counter, (unsigned)cipher_len);
+        
+        /* Pack wire format */
+        uint8_t wire_buf[256];
+        size_t wire_offset = 0;
+        
+        wire_buf[wire_offset++] = MSG_TYPE_DATA;
+        memcpy(wire_buf + wire_offset, session_ctx.sid, SID_LEN);
+        wire_offset += SID_LEN;
+        
+        wire_buf[wire_offset++] = (session_ctx.counter >> 24) & 0xFF;
+        wire_buf[wire_offset++] = (session_ctx.counter >> 16) & 0xFF;
+        wire_buf[wire_offset++] = (session_ctx.counter >> 8) & 0xFF;
+        wire_buf[wire_offset++] = session_ctx.counter & 0xFF;
+        
+        wire_buf[wire_offset++] = (cipher_len >> 8) & 0xFF;
+        wire_buf[wire_offset++] = cipher_len & 0xFF;
+        
+        memcpy(wire_buf + wire_offset, ciphertext, cipher_len);
+        wire_offset += cipher_len;
+        
+        /* Send to gateway */
+        simple_udp_sendto(&udp_conn, wire_buf, wire_offset, &dest_ipaddr);
+        LOG_INFO("  -> UDP Packet Sent with counter=%u\n", (unsigned)session_ctx.counter);
+        
+        session_ctx.counter++;
+        
+        /* Wait for periodic interval (e.g., 5 seconds) */
+        etimer_set(&periodic_timer, DATA_INTERVAL * CLOCK_SECOND);
+        PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
+    }
+    
+    if (session_ctx.counter > RENEW_THRESHOLD) {
+        LOG_INFO("\n**************************************************\n");
+        LOG_INFO("* AMORTIZATION THRESHOLD REACHED (%d msgs)      *\n", RENEW_THRESHOLD);
+        LOG_INFO("* SECURE SESSION RENEWAL TRIGGERED               *\n");
+        LOG_INFO("**************************************************\n");
+        /* Zeroize old master key and deactivate session to force new handshake */
+        secure_zero(&session_ctx, sizeof(session_ctx));
+        session_ctx.active = 0;
+    }
+  } /* End of while(1) renew loop */
+  
+  PROCESS_END();
 }
+
