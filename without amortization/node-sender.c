@@ -70,9 +70,9 @@ udp_rx_callback(struct simple_udp_connection *c,
 {
     uint8_t msg_type = data[0];
     
-    if (msg_type == MSG_TYPE_FRAG_ACK && datalen >= 3) {
-        uint16_t ack_frag_id = ((uint16_t)data[1] << 8) | data[2];
-        LOG_INFO("Got FRAG_ACK for %u. Expected %d\n", (unsigned)ack_frag_id, last_ack_received);
+    if (msg_type == MSG_TYPE_FRAG_ACK) {
+        FragmentAck *ack = (FragmentAck *)data;
+        uint16_t ack_frag_id = uip_ntohs(ack->fragment_id);
         last_ack_received = ack_frag_id;
         process_poll(&sender_process);
         return;
@@ -241,7 +241,7 @@ PROCESS_THREAD(sender_process, ev, data)
         
         static uint16_t total_frags;
         total_frags = (serialized_len + 63) / 64;
-        LOG_INFO("Total Baseline Payload: %u bytes (%u fragments)\n", (unsigned)serialized_len, total_frags);
+        printf("Total Baseline Payload: %u bytes (%u fragments)\n", (unsigned)serialized_len, total_frags);
         
         /* Fragment Blast Loop */
         static int frag_idx;
@@ -252,7 +252,7 @@ PROCESS_THREAD(sender_process, ev, data)
             acked = 0;
             last_ack_received = -1;
             
-            while(attempts < 5 && !acked) {
+            while(attempts < 20 && !acked) {
                 AuthFragment frag;
                 frag.type = MSG_TYPE_AUTH_FRAG;
                 frag.session_id = uip_htons(0xAB12);
@@ -271,32 +271,43 @@ PROCESS_THREAD(sender_process, ev, data)
                 
                 etimer_set(&periodic_timer, CLOCK_SECOND * 2);
                 while(1) {
+                    /* Check immediately in case ACK arrived via callback before we yielded */
+                    if (last_ack_received == frag_idx) {
+                        acked = 1;
+                        etimer_stop(&periodic_timer);
+                        break;
+                    }
+                    
                     PROCESS_YIELD();
                     
                     if (last_ack_received == frag_idx) {
                         acked = 1;
-                        break; /* Success */
+                        etimer_stop(&periodic_timer);
+                        break;
                     }
                     if (etimer_expired(&periodic_timer)) {
-                        break; /* Timeout */
+                        break;
                     }
                 }
+                
+                if (acked) {
+                    /* Throttle to prevent overwhelming the Cooja radio/routing layer */
+                    etimer_set(&periodic_timer, CLOCK_SECOND / 8);
+                    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
+                }
+                
                 attempts++;
             }
             if (!acked) {
-                LOG_ERR("Failed to send fragment %d\n", frag_idx);
+                LOG_ERR("Failed to send fragment %d after 20 attempts\n", frag_idx);
                 break;
             }
-            
-            /* Small delay before next fragment to let radio recover */
-            etimer_set(&periodic_timer, CLOCK_SECOND / 16);
-            PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
         }
         
         if (acked) {
             LOG_INFO("Baseline protocol transaction (#%u) sent successfully!\n", (unsigned)baseline_seq_no);
+            baseline_seq_no++;
         }
-        baseline_seq_no++;
         
         /* Zeroize ephemeral keys */
         secure_zero(&auth_error_vector, sizeof(ErrorVector));

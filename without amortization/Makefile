@@ -29,7 +29,7 @@ MAKE_ROUTING = MAKE_ROUTING_RPL_CLASSIC
 
 # Contiki-NG installation path
 # MODIFY THIS PATH to point to your Contiki-NG installation
-CONTIKI = /home/selfi/contiki-ng
+CONTIKI = /home/user/contiki-ng
 
 # Target platform - use 'native' for testing, 'z1' for hardware
 # For development and testing, use native:

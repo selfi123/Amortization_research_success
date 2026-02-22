@@ -86,11 +86,10 @@ udp_rx_callback(struct simple_udp_connection *c,
         }
         
         /* Send ACK */
-        uint8_t ack_buf[3];
-        ack_buf[0] = MSG_TYPE_FRAG_ACK;
-        ack_buf[1] = data[3]; /* MSB of fragment_id in AuthFragment */
-        ack_buf[2] = data[4]; /* LSB of fragment_id in AuthFragment */
-        simple_udp_sendto(&udp_conn, ack_buf, sizeof(ack_buf), &sender_ip_copy);
+        FragmentAck ack;
+        ack.type = MSG_TYPE_FRAG_ACK;
+        ack.fragment_id = frag->fragment_id;
+        simple_udp_sendto(&udp_conn, &ack, sizeof(FragmentAck), &sender_ip_copy);
         
         /* Check if last fragment */
         if (fragment_id == total_frags - 1) {
@@ -181,9 +180,10 @@ udp_rx_callback(struct simple_udp_connection *c,
             
             plaintext[plain_len] = '\0';
             
-            printf("========================================================================\n");
-            printf("*** BASELINE NOT AMORTIZED DECRYPTED DATA: %s ***\n", plaintext);
-            printf("========================================================================\n");
+            LOG_INFO("========================================\n");
+            LOG_INFO("*** BASELINE NOT AMORTIZED ***\n");
+            LOG_INFO("DECRYPTED DATA: %s\n", plaintext);
+            LOG_INFO("========================================\n");
             
             /* Zeroize sensitive data for Baseline */
             secure_zero(&recovered_error, sizeof(ErrorVector));
