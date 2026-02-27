@@ -86,6 +86,25 @@ function writeSummary() {
     out.write("  - Total Bandwidth Saved:    >98% (Amortization Active)\n");
 
     out.write("==================================================\n");
+
+    // D. CSV Output for Excel / Data Graphing Generation
+    out.write("\n\n==================================================\n");
+    out.write("             CSV EXPORT FOR GRAPHING              \n");
+    out.write("==================================================\n");
+    out.write("Copy the text below into a .csv file and open in Excel\n");
+    out.write("Protocol_Type,Keygen_Delay_ms,Total_Auth_Delay_ms,Gateway_Verify_Delay_ms,Session_Key_Setup_Delay_ms,E2E_Latency_ms,Total_Messages,Auth_Payload_Bytes,Data_Payload_Bytes\n");
+
+    var protocol_name = is_baseline ? "Unamortized_Baseline" : "Amortized_Session";
+    out.write(protocol_name + "," +
+        time_to_ms(metrics.start_keygen, metrics.end_keygen, is_baseline, "keygen").toFixed(3) + "," +
+        auth_delay.toFixed(3) + "," +
+        time_to_ms(metrics.start_verify, metrics.end_verify, is_baseline, "verify").toFixed(3) + "," +
+        time_to_ms(metrics.start_session_setup, metrics.end_session_setup, is_baseline, "session").toFixed(3) + "," +
+        e2e_latency.toFixed(3) + "," +
+        metrics.data_messages_sent + "," +
+        metrics.auth_payload_bytes + "," +
+        metrics.data_payload_bytes + "\n");
+    out.write("==================================================\n");
 }
 
 while (true) {

@@ -1,5 +1,5 @@
-build/cooja/obj/nullradio.o: /home/user/contiki-ng/os/dev/nullradio.c \
- /home/user/contiki-ng/os/dev/nullradio.h \
- /home/user/contiki-ng/os/dev/radio.h
-/home/user/contiki-ng/os/dev/nullradio.h:
-/home/user/contiki-ng/os/dev/radio.h:
+build/cooja/obj/nullradio.o: /home/selfi/contiki-ng/os/dev/nullradio.c \
+ /home/selfi/contiki-ng/os/dev/nullradio.h \
+ /home/selfi/contiki-ng/os/dev/radio.h
+/home/selfi/contiki-ng/os/dev/nullradio.h:
+/home/selfi/contiki-ng/os/dev/radio.h:

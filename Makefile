@@ -10,7 +10,7 @@ CFLAGS += -DSID_LEN=8 -DMASTER_KEY_LEN=32 -DMAX_SESSIONS=16
 
 # Contiki-NG installation path
 # MODIFY THIS PATH to point to your Contiki-NG installation
-CONTIKI = /home/user/contiki-ng
+CONTIKI = /home/selfi/contiki-ng
 
 # Target platform - use 'native' for testing, 'z1' for hardware
 # For development and testing, use native:

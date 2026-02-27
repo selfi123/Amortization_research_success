@@ -299,13 +299,13 @@ PROCESS_THREAD(sender_process, ev, data)
                 attempts++;
             }
             if (!acked) {
-                LOG_ERR("Failed to send fragment %d after 20 attempts\n", frag_idx);
+                LOG_ERR("Failed to send fragment %d after 20 attempts\n", frBaseline protocol transaction (#%u) sent successfully!\nag_idx);
                 break;
             }
         }
         
         if (acked) {
-            LOG_INFO("Baseline protocol transaction (#%u) sent successfully!\n", (unsigned)baseline_seq_no);
+            LOG_INFO("", (unsigned)baseline_seq_no);
             baseline_seq_no++;
         }
         

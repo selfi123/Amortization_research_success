@@ -1,2 +1,2 @@
 build/cooja/obj/cooja-log.o: \
- /home/user/contiki-ng/arch/platform/cooja/sys/cooja-log.c
+ /home/selfi/contiki-ng/arch/platform/cooja/sys/cooja-log.c
