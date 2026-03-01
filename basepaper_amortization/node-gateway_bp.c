@@ -78,15 +78,31 @@ static session_entry_t* create_session(const uint8_t *sid,
     session_entry_t *se = NULL;
     int i;
     
-    /* Find free slot */
+    /* FIX (EB-FS Proof 3): Zeroize any existing session from this peer
+     * before creating a new one. Old K_master erased on epoch renewal,
+     * matching proof3_forward_secrecy.m Phase 4 zeroization. */
     for (i = 0; i < MAX_SESSIONS; i++) {
-        if (!session_table[i].in_use) {
+        if (session_table[i].in_use &&
+            memcmp(session_table[i].peer_addr, peer, 16) == 0) {
+            LOG_INFO("EB-FS: Zeroizing old K_master for renewing peer.\n");
+            secure_zero(session_table[i].K_master, MASTER_KEY_LEN);
+            secure_zero(session_table[i].sid, SID_LEN);
+            session_table[i].in_use = 0;
+            session_table[i].last_seq = 0;
             se = &session_table[i];
             break;
         }
     }
-    
-    /* If no free slot, evict oldest */
+
+    /* Find a free slot if no peer match found */
+    for (i = 0; i < MAX_SESSIONS; i++) {
+        if (!session_table[i].in_use && se == NULL) {
+            se = &session_table[i];
+            break;
+        }
+    }
+
+    /* If still no free slot, evict oldest */
     if (se == NULL) {
         se = &session_table[0];
         for (i = 1; i < MAX_SESSIONS; i++) {

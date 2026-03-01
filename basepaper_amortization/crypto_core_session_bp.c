@@ -285,8 +285,15 @@ int session_encrypt(session_ctx_t *ctx,
     nonce[10] = (ctx->counter >> 8) & 0xFF;
     nonce[11] = ctx->counter & 0xFF;
     
+    uint8_t aad[SID_LEN + 4];
+    memcpy(aad, ctx->sid, SID_LEN);
+    aad[SID_LEN] = (ctx->counter >> 24) & 0xFF;
+    aad[SID_LEN + 1] = (ctx->counter >> 16) & 0xFF;
+    aad[SID_LEN + 2] = (ctx->counter >> 8) & 0xFF;
+    aad[SID_LEN + 3] = ctx->counter & 0xFF;
+    
     int ret = aead_encrypt(out, out_len, plaintext, pt_len,
-                          ctx->sid, SID_LEN, K_i, nonce);
+                          aad, sizeof(aad), K_i, nonce);
     
     secure_zero(K_i, sizeof(K_i));
     return ret;
@@ -310,8 +317,15 @@ int session_decrypt(session_entry_t *se, uint32_t counter,
     nonce[10] = (counter >> 8) & 0xFF;
     nonce[11] = counter & 0xFF;
     
+    uint8_t aad[SID_LEN + 4];
+    memcpy(aad, se->sid, SID_LEN);
+    aad[SID_LEN] = (counter >> 24) & 0xFF;
+    aad[SID_LEN + 1] = (counter >> 16) & 0xFF;
+    aad[SID_LEN + 2] = (counter >> 8) & 0xFF;
+    aad[SID_LEN + 3] = counter & 0xFF;
+    
     int ret = aead_decrypt(out, out_len, ct, ct_len,
-                          se->sid, SID_LEN, K_i, nonce);
+                          aad, sizeof(aad), K_i, nonce);
     
     if (ret == 0) {
         se->last_seq = counter;
