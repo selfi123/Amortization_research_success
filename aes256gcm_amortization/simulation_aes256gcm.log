@@ -1,6 +1,7 @@
 ==============================================================
-   BASE PAPER PARAMETER AMORTIZATION - SIMULATION METRICS    
-   Kumari et al. | n=512 | N=3 | LDPC 102x204 | AEAD         
+    AES-256-GCM AMORTIZATION - SIMULATION METRICS            
+    Kumari et al. | n=512 | N=3 | LDPC 102x204 | AES-256-GCM 
+    Nonce: 96-bit | Tag: 128-bit | Key: 256-bit (NIST SP 800-38D)
 ==============================================================
 Timestamp(us)	MoteID	Message
 --------------------------------------------------------------
@@ -5927,7 +5928,8 @@ Timestamp(us)	MoteID	Message
 [F] SESSION KEY SETUP DELAY (Gateway)
   LDPC Decode + K_master HKDF  : 1.000 ms
 
-[G] DATA PHASE (Amortized AES-CTR + HMAC-SHA256)
+[G] DATA PHASE (Amortized AES-256-GCM — 96-bit nonce, 128-bit tag, 256-bit key)
+  Per-packet overhead: 28 bytes (12B nonce + 16B GCM tag) — 45.1% saving vs CT0
   Data Payload per Message     : 29 bytes (avg)
   E2E Latency (Message #1)     : 25.096 ms
   Messages Sent (total)        : 25
@@ -5980,6 +5982,7 @@ LDPC_ROWS,102,rows,Parity check matrix
 LDPC_COLS,204,cols,Codeword length
 
 --- Horizontal comparison CSV (paste into single sheet with other variants) ---
-Variant,n,N,KeyGen_ms,Auth_ms,Verify_ms,DataLatency_ms,AuthPayload_B,Renewals
-BasePaper_Amortized,512,3,0.000,8242.680,0.000,25.096,10317,2
+Variant,n,N,KeyGen_ms,Auth_ms,Verify_ms,DataLatency_ms,AuthPayload_B,Renewals,AEAD_Overhead_B
+AES256GCM_Amortized,512,3,0.000,8242.680,0.000,25.096,10317,2,28
+[Note] 28B overhead = 12B GCM nonce + 16B tag. Saves 45.1% vs base paper CT0 (51B)
 ==============================================================
